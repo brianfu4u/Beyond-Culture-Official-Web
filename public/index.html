@@ -202,10 +202,24 @@ html[lang="en"] .hero__lede{margin-top:20px}
 .pay a{border-bottom:1px solid var(--ink-16); transition:border-color .3s}
 .pay a:hover{border-color:var(--koke)}
 .pay .muted{color:var(--ink-38)}
-.contact{margin-top:clamp(28px,6vh,56px); padding:clamp(26px,3.4vw,40px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px 32px}
+.contact{margin-top:clamp(28px,6vh,56px); padding:clamp(26px,3.4vw,44px); display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:clamp(24px,4vw,56px); align-items:start}
+.contact__meta{margin-top:26px; padding-top:16px; border-top:1px solid var(--ink-16); display:grid; gap:6px; font-family:var(--ut); font-size:12.5px; letter-spacing:.06em; color:var(--ink-60)}
+.contact__meta a{color:var(--sumi); border-bottom:1px solid var(--ink-16); justify-self:start}
+.form{display:grid; gap:16px; padding:clamp(20px,2.6vw,30px); border-radius:14px; background:rgba(255,255,255,.42);
+  box-shadow:inset 0 0 0 1px rgba(20,22,26,.08), inset 0 1px 0 rgba(255,255,255,.9)}
+.form__title{margin:0; font-size:16px; font-weight:600; letter-spacing:.2em}
+.form__note{margin:0; font-family:var(--ut); font-size:11.5px; line-height:1.9; letter-spacing:.04em; color:var(--ink-38)}
+.field{display:grid; gap:7px}
+.field > span{font-family:var(--ut); font-size:11.5px; letter-spacing:.16em; color:var(--ink-60)}
+.field .req{color:var(--shu); margin-left:2px}
+.field input,.field textarea{width:100%; font-family:var(--mincho); font-size:15px; color:var(--sumi); padding:12px 14px; border-radius:8px;
+  border:1px solid var(--ink-16); background:rgba(255,255,255,.72); box-shadow:inset 1px 1px 3px rgba(20,22,26,.06); transition:border-color .3s, box-shadow .3s}
+.field textarea{min-height:140px; resize:vertical; line-height:1.8}
+.field input:focus,.field textarea:focus{outline:none; border-color:var(--koke); box-shadow:0 0 0 3px rgba(122,138,92,.18)}
+.send{justify-content:center; width:100%; cursor:pointer}
 .contact h2{margin:12px 0 0; font-size:clamp(22px,2.6vw,30px); font-weight:600; letter-spacing:.12em}
 .contact p{margin:10px 0 0; max-width:44ch; font-size:13.5px; line-height:2.1; color:var(--ink-60)}
-.mailto{flex:none; display:inline-flex; align-items:center; gap:12px; padding:14px 26px; font-family:var(--ut); font-size:13.5px; letter-spacing:.12em;
+.mailto{display:inline-flex; align-items:center; gap:12px; padding:14px 26px; font-family:var(--ut); font-size:13.5px; letter-spacing:.12em;
   color:var(--kami); background:var(--koke); border:1px solid var(--koke); transition:background .35s,color .35s}
 .mailto:hover{background:transparent; color:var(--koke)}
 .mailto i{font-style:normal}
@@ -219,7 +233,7 @@ html[lang="en"] .hero__lede{margin-top:20px}
 .copy{margin:20px 4px 0; display:flex; flex-wrap:wrap; gap:6px 20px; justify-content:space-between; font-family:var(--ut); font-size:11px; letter-spacing:.06em; color:var(--ink-38)}
 
 @media(max-width:900px){
-  .hero{grid-template-columns:1fr} .cards,.strip,.profile{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr} .cards,.strip,.profile,.contact{grid-template-columns:1fr}
   .stage{height:380px}
   .bw--sm-hide{display:none}
   .bw{left:var(--xs,var(--x)); top:var(--ys,var(--y))}
@@ -230,7 +244,6 @@ html[lang="en"] .hero__lede{margin-top:20px}
   .langs button{padding:5px 8px; font-size:10px; letter-spacing:.1em}
   .bub{font-size:calc(var(--fs,15px) * .84)}
   .news li{grid-template-columns:5.4em auto; row-gap:4px} .news p{grid-column:1/-1}
-  .contact{flex-direction:column; align-items:stretch} .mailto{justify-content:center}
   .hero__seal{display:none}
 }
 @media(max-width:400px){ .book{display:none} }
@@ -410,15 +423,28 @@ html[lang="en"] .hero__lede{margin-top:20px}
     <div>
       <p class="eyebrow" data-en="CONTACT" data-zh="聯絡我們">お問い合わせ</p>
       <h2 data-en="Talk to us directly." data-zh="歡迎直接與我們聯繫。">直接、ご連絡ください。</h2>
-      <p data-en="Enquiries about any of our services, partnerships, press or payment verification reach the representative directly. We reply within one business day."
-         data-zh="各項服務、合作洽談、媒體採訪或金流審查相關詢問，均由代表人親自回覆，一個工作天內回信。">
+      <p data-en="Enquiries about any of our services, partnerships, press or payment verification reach the representative directly."
+         data-zh="各項服務、合作洽談、媒體採訪或金流審查相關詢問，均由代表人親自回覆。">
         各サービスのご相談、業務提携、取材、決済審査に関するお問い合わせは、代表者が直接拝見します。
-        1営業日以内にご返信いたします。
       </p>
+      <div class="contact__meta">
+        <span data-en="We reply within one business day." data-zh="平日一個工作天內回覆。">平日1営業日以内にご返信いたします</span>
+        <a href="mailto:brian@beyondculture.ai">brian@beyondculture.ai</a>
+      </div>
     </div>
-    <a class="mailto" href="mailto:brian@beyondculture.ai?subject=Beyond%20Culture%20%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%20%2F%20Inquiry">
-      brian@beyondculture.ai <i aria-hidden="true">→</i>
-    </a>
+
+    <form class="form" id="contactForm" novalidate>
+      <p class="form__title" data-en="Contact form" data-zh="聯絡表單">お問い合わせフォーム</p>
+      <p class="form__note" data-en="When you press send, your email app opens with everything filled in, addressed to us. Check it, then send."
+         data-zh="按下送出後，您的電子郵件程式將開啟並自動填入內容，確認後即可寄出。">ご入力後、送信ボタンを押すとお使いのメールソフトが開き、内容を確認のうえ送信いただけます。</p>
+      <label class="field"><span><b data-en="Name" data-zh="姓名" style="font-weight:inherit">お名前</b><i class="req" aria-hidden="true">＊</i></span>
+        <input name="name" type="text" autocomplete="name" required></label>
+      <label class="field"><span><b data-en="Email address" data-zh="電子郵件" style="font-weight:inherit">メールアドレス</b><i class="req" aria-hidden="true">＊</i></span>
+        <input name="email" type="email" autocomplete="email" required></label>
+      <label class="field"><span><b data-en="Your message" data-zh="詢問內容" style="font-weight:inherit">お問い合わせ内容</b><i class="req" aria-hidden="true">＊</i></span>
+        <textarea name="message" required></textarea></label>
+      <button class="mailto send" type="submit"><span data-en="Send by email" data-zh="以電子郵件寄送">メールで送信する</span></button>
+    </form>
   </section>
 </main>
 
@@ -463,6 +489,19 @@ html[lang="en"] .hero__lede{margin-top:20px}
   try{ saved=localStorage.getItem("bc-lang"); }catch(e){}
   if(saved && tags[saved]) setLang(saved);
   else if((navigator.language||"").toLowerCase().indexOf("zh")===0) setLang("zh");
+
+  /* contact form: opens the visitor's mail app, addressed to the representative */
+  var form=document.getElementById("contactForm");
+  if(form){
+    form.addEventListener("submit",function(e){
+      e.preventDefault();
+      if(!form.checkValidity()){ form.reportValidity(); return; }
+      var n=form.elements.name.value.trim(), m=form.elements.email.value.trim(), t=form.elements.message.value.trim();
+      var subject="Beyond Culture お問い合わせ / Inquiry — "+n;
+      var body="お名前 / Name: "+n+"\n"+"メール / Email: "+m+"\n\n"+t+"\n";
+      window.location.href="mailto:brian@beyondculture.ai?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+    });
+  }
 
   /* gentle pointer depth on the hero scene */
   var scene=document.querySelector("[data-depth]");
