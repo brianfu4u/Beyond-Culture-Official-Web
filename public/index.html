@@ -7,243 +7,361 @@
 <meta name="description" content="日本の文化的な営みを、AIの技術で支えるプロダクトをつくっています。魂の銘（Soul ID）／漢字でんしゃ／ナゼホリ。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400&family=Shippori+Mincho+B1:wght@400;600&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Noto+Sans+JP:wght@100;200&display=swap" rel="stylesheet">
 <style>
+
 /* ===========================================================
-   BEYOND CULTURE — corporate hub
-   Same palette and type as soul-id.jp, deliberately quieter:
-   no artwork, no motion. The products carry the personality.
+   BEYOND CULTURE — corporate hub, in the 魂の銘 language
+   washi / kami paper, sumi ink, Shippori Mincho, vertical title,
+   a shu seal and a moss button — plus frosted-glass speech
+   bubbles floating above a sumi bowl.
    =========================================================== */
 :root{
-  --sumi:#14161A; --washi:#E9E7E1; --kami:#F5F3EE;
-  --koke:#7A8A5C; --shu:#B03A2B;
-  --ink-16:rgba(20,22,26,.16); --ink-38:rgba(20,22,26,.38); --ink-60:rgba(20,22,26,.60);
-  --jp:"Shippori Mincho B1","Noto Serif JP","Hiragino Mincho ProN","Yu Mincho","MS PMincho",serif;
+  --sumi:#14161A; --sumi-soft:#2A2E35;
+  --washi:#E9E7E1; --kami:#F5F3EE; --kasumi:#D9D6CE;
+  --shu:#B03A2B; --koke:#7A8A5C; --koke-lit:#9DAC7C; --lamp:#E9B870;
+  --ink-60:rgba(20,22,26,.60); --ink-38:rgba(20,22,26,.40); --ink-16:rgba(20,22,26,.14); --ink-08:rgba(20,22,26,.07);
+  --mincho:"Shippori Mincho B1","Noto Serif JP","Noto Serif CJK JP","Hiragino Mincho ProN","Yu Mincho","MS PMincho",serif;
   --la:"Cormorant Garamond","Shippori Mincho B1",serif;
-  --ut:"Noto Sans JP","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
-  --gut:clamp(20px,5vw,64px);
-  --col:min(1100px,100% - var(--gut)*2);
+  --ut:"Zen Kaku Gothic New","Noto Sans JP","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --dew:"Noto Sans JP","Noto Sans CJK JP","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --glass:linear-gradient(160deg, rgba(255,255,255,.78) 0%, rgba(255,255,255,.44) 100%);
+  --glass-edge:inset 0 1px 0 rgba(255,255,255,.95), inset 0 0 0 1px rgba(255,255,255,.55);
+  --lift:0 1px 2px rgba(20,22,26,.05), 0 18px 34px -18px rgba(20,22,26,.26), 0 40px 70px -44px rgba(20,22,26,.28);
+  --lift-hi:0 2px 4px rgba(20,22,26,.06), 0 26px 44px -20px rgba(20,22,26,.32), 0 60px 90px -50px rgba(20,22,26,.32);
+  --gut:clamp(20px,5vw,64px); --col:min(1180px,100% - var(--gut)*2);
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0; min-height:100svh; background:var(--washi); color:var(--sumi);
-  font-family:var(--jp); line-height:1.95; font-feature-settings:"palt" 1;
-  -webkit-font-smoothing:antialiased;
-  display:flex; flex-direction:column;
+  margin:0; color:var(--sumi); font-family:var(--mincho); line-height:1.95;
+  font-feature-settings:"palt" 1; -webkit-font-smoothing:antialiased;
+  line-break:strict; word-break:auto-phrase; overflow-x:hidden;
+  background:
+    radial-gradient(48% 38% at 92% 4%, rgba(226,138,104,.34) 0%, rgba(226,138,104,0) 72%),
+    radial-gradient(34% 28% at 68% 30%, rgba(228,172,96,.16) 0%, rgba(228,172,96,0) 72%),
+    radial-gradient(40% 30% at 4% 70%, rgba(196,170,140,.18) 0%, rgba(196,170,140,0) 72%),
+    linear-gradient(180deg, #EFEAE1 0%, #E6E0D5 38%, #DDD6C9 72%, #D5CEC0 100%);
 }
 a{color:inherit; text-decoration:none}
 button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 :focus-visible{outline:2px solid var(--koke); outline-offset:3px}
 ::selection{background:var(--koke); color:var(--kami)}
-
-.eyebrow{
-  font-family:var(--ut); font-size:10.5px; font-weight:400;
-  letter-spacing:.34em; text-transform:uppercase; color:var(--ink-38); margin:0;
-}
-.cap{font-family:var(--ut); font-size:11.5px; line-height:1.85; letter-spacing:.05em; color:var(--ink-60)}
-
-/* ---------- header ---------- */
-.top{
-  border-bottom:1px solid var(--ink-16);
-  padding:16px var(--gut);
-  display:flex; align-items:center; gap:16px; flex-wrap:wrap;
-}
-.mark{margin-right:auto; display:flex; align-items:baseline; gap:12px}
-.mark strong{font-size:17px; font-weight:600; letter-spacing:.2em}
-.mark small{font-family:var(--la); font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-38)}
-.langs{display:flex; align-items:center; border:1px solid var(--ink-16); border-radius:99px; overflow:hidden}
-.langs button{
-  font-family:var(--ut); font-size:10.5px; letter-spacing:.16em;
-  padding:6px 13px; color:var(--ink-38); transition:background .3s,color .3s;
-}
-.langs button[aria-pressed="true"]{background:var(--sumi); color:var(--kami)}
-
-/* ---------- intro ---------- */
-main{flex:1; width:var(--col); margin-inline:auto; padding-block:clamp(44px,9vh,92px) clamp(32px,6vh,60px)}
-.intro{max-width:44ch}
-.intro h1{
-  margin:14px 0 0; font-size:clamp(26px,4vw,40px); font-weight:600;
-  letter-spacing:.1em; line-height:1.6;
-}
-.intro p{margin:20px 0 0; font-size:15px; line-height:2.2; letter-spacing:.04em; color:var(--ink-60)}
-
-/* ---------- the three cards ---------- */
-.cards{
-  margin-top:clamp(34px,6vh,64px);
-  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px;
-  background:var(--ink-16); border:1px solid var(--ink-16);
-}
-.card{
-  position:relative; background:var(--kami);
-  padding:clamp(24px,3vw,34px);
-  display:flex; flex-direction:column; gap:12px; min-height:270px;
-  transition:background .4s, transform .4s;
-}
-.card:hover,.card:focus-visible{background:#FFFDF9; transform:translateY(-2px)}
-.card__mark{
-  position:absolute; top:clamp(16px,2vw,22px); right:clamp(16px,2vw,22px);
-  font-size:40px; line-height:1; color:var(--ink-16);
-}
-.card__no{font-family:var(--ut); font-size:10px; letter-spacing:.3em; color:var(--koke)}
-.card h2{margin:0; font-size:20px; font-weight:600; letter-spacing:.1em; line-height:1.65}
-.card h2 span{display:block; font-family:var(--la); font-size:13px; font-weight:400;
-  letter-spacing:.24em; text-transform:uppercase; color:var(--ink-38); margin-top:6px}
-.card p{margin:0; font-size:13.5px; line-height:2.05; letter-spacing:.03em; color:var(--ink-60)}
-.card__go{
-  margin-top:auto; padding-top:16px; border-top:1px solid var(--ink-16);
-  display:flex; align-items:center; justify-content:space-between; gap:10px;
-  font-family:var(--ut); font-size:11.5px; letter-spacing:.1em; color:var(--sumi);
-}
-.card__go i{font-style:normal; transition:transform .35s cubic-bezier(.2,.7,.3,1)}
-.card:hover .card__go i,.card:focus-visible .card__go i{transform:translate(3px,-3px)}
-.card--soon{background:var(--washi)}
-.card--soon .card__go{color:var(--ink-38)}
-.badge{
-  display:inline-block; font-family:var(--ut); font-size:9.5px; letter-spacing:.18em;
-  border:1px solid var(--ink-16); padding:3px 8px; color:var(--ink-60);
+.nb{display:inline-block}
+.eyebrow{margin:0; font-family:var(--ut); font-size:11px; font-weight:500; letter-spacing:.34em; text-transform:uppercase; color:var(--ink-38)}
+.panel{
+  background:var(--glass); border-radius:18px; box-shadow:var(--glass-edge), var(--lift);
+  backdrop-filter:blur(14px) saturate(120%); -webkit-backdrop-filter:blur(14px) saturate(120%);
 }
 
-/* ---------- news + settlement ---------- */
-.strip{
-  margin-top:clamp(36px,6vh,68px);
-  display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
-  gap:clamp(28px,5vw,64px); align-items:start;
-}
-.news ol{margin:14px 0 0; padding:0; list-style:none; border-top:1px solid var(--ink-16)}
-.news li{
-  display:grid; grid-template-columns:5.6em auto minmax(0,1fr); gap:0 14px;
-  align-items:baseline; padding:11px 0; border-bottom:1px solid var(--ink-16);
-}
-.news time{font-family:var(--ut); font-size:11px; letter-spacing:.1em; color:var(--ink-38); white-space:nowrap}
-.tag{
-  font-family:var(--ut); font-size:9.5px; letter-spacing:.14em; white-space:nowrap;
-  border:1px solid var(--ink-16); padding:2px 7px; color:var(--ink-60);
-}
-.tag--co{border-color:var(--koke); color:var(--koke)}
-.news p{margin:0; font-size:13px; line-height:1.9; letter-spacing:.03em}
-.pay{background:var(--kami); border:1px solid var(--ink-16); padding:clamp(20px,2.6vw,28px)}
-.pay dl{margin:14px 0 0}
-.pay dl div{padding:9px 0; border-bottom:1px solid var(--ink-16)}
-.pay dl div:last-child{border-bottom:0; padding-bottom:0}
-.pay dt{font-family:var(--ut); font-size:10px; letter-spacing:.18em; color:var(--ink-38); margin-bottom:4px}
-.pay dd{margin:0; font-size:13px; line-height:1.9; letter-spacing:.03em}
-.pay ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:5px}
-.pay li{font-size:12.5px; line-height:1.8}
-.pay a{border-bottom:1px solid var(--ink-16)}
+/* ---------- header: same bar as soul-id.jp ---------- */
+.top{position:sticky; top:0; z-index:30; display:flex; align-items:center; gap:clamp(12px,2.4vw,28px); padding:14px var(--gut);
+  background:rgba(232,226,216,.82); backdrop-filter:blur(14px) saturate(140%); -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-bottom:1px solid var(--ink-16)}
+.mark{margin-right:auto; display:flex; align-items:center; gap:12px; min-width:0}
+.mark__chip{flex:none; width:30px; height:30px; display:grid; place-items:center; font-size:15px; font-weight:600; color:var(--shu); border:1.5px solid var(--shu); background:rgba(255,255,255,.5)}
+.mark strong{font-size:17px; font-weight:600; letter-spacing:.22em; white-space:nowrap}
+.mark small{font-family:var(--la); font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-38); white-space:nowrap}
+.langs{display:flex; align-items:center; gap:3px; border-radius:99px; padding:4px; background:#E0D9CC;
+  box-shadow:inset 2px 2px 5px rgba(20,22,26,.12), inset -2px -2px 5px rgba(255,255,255,.85)}
+.langs button{font-family:var(--ut); font-size:10.5px; letter-spacing:.18em; padding:5px 11px; border-radius:99px; color:var(--ink-38); transition:.3s}
+.langs button[aria-pressed="true"]{color:var(--sumi); background:linear-gradient(180deg,#fff,#F1EFEA); box-shadow:0 1px 0 #fff inset, 0 4px 10px -4px rgba(20,22,26,.32)}
+.book{display:inline-flex; align-items:center; background:var(--koke); color:var(--kami); padding:10px 20px; font-size:13px; letter-spacing:.22em;
+  border:1px solid var(--koke); transition:background .35s,color .35s; white-space:nowrap}
+.book:hover{background:transparent; color:var(--koke)}
+
+/* ---------- hero ---------- */
+main{width:var(--col); margin-inline:auto}
+.hero{position:relative; display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr); align-items:center; gap:clamp(8px,3vw,36px);
+  padding-block:clamp(36px,8vh,84px) clamp(8px,3vh,28px)}
+.hero__text{display:grid; grid-template-columns:auto minmax(0,1fr); grid-template-rows:auto 1fr; column-gap:clamp(18px,3vw,40px); align-items:start}
+.hero .eyebrow{grid-column:1 / -1; margin-bottom:20px}
+.hero h1{margin:0; font-weight:800; font-size:clamp(38px,5.2vw,68px); letter-spacing:.14em; line-height:1.4}
+html[lang="ja"] .hero h1, html[lang="zh-Hant"] .hero h1{
+  writing-mode:vertical-rl; text-orientation:upright; font-feature-settings:normal; letter-spacing:.24em; line-height:1.25; grid-row:2}
+html[lang="ja"] .hero h1 .nb, html[lang="zh-Hant"] .hero h1 .nb{display:block}
+html[lang="zh-Hant"] .hero h1{font-size:clamp(34px,4.4vw,58px)}
+html[lang="en"] .hero__text{grid-template-columns:1fr}
+html[lang="en"] .hero h1{letter-spacing:.02em; font-weight:600}
+.hero__lede{margin:0; font-size:15px; line-height:2.3; letter-spacing:.05em; color:var(--ink-60); align-self:end}
+html[lang="en"] .hero__lede{margin-top:20px}
+.hero__lat{display:block; margin-top:22px; font-family:var(--la); font-size:15px; letter-spacing:.44em; text-transform:uppercase; color:var(--ink-38)}
+.hero__seal{position:absolute; right:0; bottom:clamp(18px,4vh,40px); width:48px; height:48px; border:1.5px solid var(--shu); color:var(--shu); display:grid; place-items:center; opacity:.9}
+.hero__seal span{writing-mode:vertical-rl; font-size:15px; letter-spacing:.18em; font-weight:600}
+
+/* the stage: chains, dew, glass bubbles, sumi bowl */
+.stage{position:relative; height:clamp(380px,46vw,560px); perspective:1000px; transform-style:preserve-3d; --px:0; --py:0}
+.chain{position:absolute; top:0; width:8px; height:var(--h,70%); left:var(--x); opacity:var(--o,.35);
+  background:radial-gradient(circle, var(--sumi) 0 var(--r,1.6px), transparent calc(var(--r,1.6px) + .6px)) center top/8px var(--g,13px) repeat-y;
+  -webkit-mask:linear-gradient(180deg,#000 0%,#000 60%,transparent 100%); mask:linear-gradient(180deg,#000 0%,#000 60%,transparent 100%);
+  animation:shimmer var(--t,7s) ease-in-out var(--dl,0s) infinite}
+@keyframes shimmer{50%{opacity:calc(var(--o,.35) * .45)}}
+.dew{position:absolute; right:0; top:4%; writing-mode:vertical-rl; text-orientation:upright; font-family:var(--dew); font-weight:100;
+  font-size:clamp(40px,5vw,62px); letter-spacing:.12em; color:#E4E1DA;
+  text-shadow:1px 1px 0 #fff, -1px -1px 1px rgba(20,22,26,.18), 3px 5px 8px rgba(20,22,26,.14)}
+.bowl{position:absolute; left:18%; right:14%; bottom:-2%; height:28%}
+.stage::after{content:""; position:absolute; left:14%; right:10%; bottom:-7%; height:40px; border-radius:50%;
+  background:radial-gradient(closest-side, rgba(20,22,26,.2), rgba(20,22,26,0)); filter:blur(6px); z-index:-1}
+.bowl svg{width:100%; height:100%; overflow:visible}
+.inside{position:absolute; left:34%; right:30%; bottom:4%; display:flex; justify-content:space-around; font-size:15px; color:var(--sumi); opacity:.5}
+.bw{position:absolute; left:var(--x); top:var(--y);
+  transform:translate3d(calc(var(--px) * var(--d) * 20px), calc(var(--py) * var(--d) * 14px), calc(var(--z) * 1px)) rotate(var(--r));
+  transition:transform .7s cubic-bezier(.2,.7,.3,1)}
+.bub{position:relative; display:inline-block; white-space:nowrap; padding:.6em 1.1em; border-radius:14px;
+  font-family:var(--mincho); font-size:var(--fs,15px); font-weight:600; letter-spacing:.1em; line-height:1.5; color:var(--sumi);
+  background:var(--glass); backdrop-filter:blur(10px) saturate(120%); -webkit-backdrop-filter:blur(10px) saturate(120%);
+  box-shadow:var(--glass-edge), inset 0 -3px 8px rgba(20,22,26,.05), 0 18px 30px -14px rgba(20,22,26,.36), 0 4px 10px rgba(20,22,26,.07);
+  animation:float var(--t,7s) ease-in-out var(--dl,0s) infinite alternate}
+.bub::after{content:""; position:absolute; left:20px; bottom:-6px; width:12px; height:12px; transform:rotate(45deg); z-index:-1;
+  background:rgba(255,255,255,.55); box-shadow:inset -1px -1px 0 rgba(255,255,255,.6)}
+.bub--tr::after{left:auto; right:20px}
+.bub--la{font-family:var(--la); font-weight:400; letter-spacing:.18em; font-style:italic}
+.bub--sumi{color:var(--kami); background:linear-gradient(160deg,#2A2E35,var(--sumi)); box-shadow:inset 0 1px 0 rgba(255,255,255,.12), 0 18px 30px -14px rgba(20,22,26,.55)}
+.bub--sumi::after{background:#1C1F24; box-shadow:none}
+.bub--koke{color:var(--kami); background:linear-gradient(160deg,var(--koke-lit),var(--koke)); box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 18px 30px -14px rgba(122,138,92,.6)}
+.bub--koke::after{background:#83936A; box-shadow:none}
+.bub--shu{color:var(--shu); box-shadow:var(--glass-edge), inset 0 0 0 1.5px rgba(176,58,43,.55), 0 16px 28px -16px rgba(176,58,43,.35)}
+.bub--ember{color:#fff; background:linear-gradient(160deg,#D4604A 0%,var(--shu) 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35), 0 20px 34px -14px rgba(176,58,43,.6), 0 4px 10px rgba(176,58,43,.18)}
+.bub--ember::after{background:#B9432F; box-shadow:none}
+.bub--deep{color:#FBE9DF; background:linear-gradient(160deg,#9A3526 0%,#6E2016 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.2), 0 18px 28px -12px rgba(110,32,22,.6)}
+.bub--deep::after{background:#7A2519; box-shadow:none}
+.bw--far .bub{filter:blur(2.4px); opacity:.65}
+.bw--mid .bub{filter:blur(.6px)}
+@keyframes float{from{transform:translateY(-7px)} to{transform:translateY(7px)}}
+
+/* ---------- services ---------- */
+.products{padding-block:clamp(28px,6vh,56px) 0}
+.products__head{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px 24px}
+.legend{margin:0; display:flex; gap:18px; font-family:var(--ut); font-size:12px; color:var(--ink-60)}
+.legend > span{display:inline-flex; align-items:center; gap:8px}
+.legend b{font-weight:400}
+.cards{margin-top:18px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(16px,2vw,24px)}
+.card{position:relative; display:flex; flex-direction:column; border-radius:18px; overflow:hidden;
+  background:var(--glass); box-shadow:var(--glass-edge), var(--lift);
+  backdrop-filter:blur(14px) saturate(120%); -webkit-backdrop-filter:blur(14px) saturate(120%);
+  transition:transform .5s cubic-bezier(.2,.7,.3,1), box-shadow .5s}
+.card:hover,.card:focus-visible{transform:translateY(-6px); box-shadow:var(--glass-edge), var(--lift-hi)}
+.cover{position:relative; height:150px; overflow:hidden; border-bottom:1px solid var(--ink-08)}
+.cover .g{position:absolute; right:22px; top:16px; writing-mode:vertical-rl; text-orientation:upright; font-feature-settings:normal;
+  font-size:26px; font-weight:800; letter-spacing:.24em; line-height:1}
+.cover .seal{position:absolute; right:74px; bottom:18px; width:26px; height:26px; border:1.5px solid var(--shu); color:var(--shu); display:grid; place-items:center; font-size:12px}
+.cover .glyph{position:absolute; left:22px; bottom:20px; width:64px; height:64px; border-radius:16px; display:grid; place-items:center; font-size:32px; font-weight:800;
+  background:var(--glass); box-shadow:var(--glass-edge), 0 14px 24px -12px rgba(20,22,26,.4)}
+.cover .ch{position:absolute; top:0; width:6px; left:var(--x); height:70%; opacity:.3;
+  background:radial-gradient(circle, var(--sumi) 0 1.3px, transparent 2px) center top/6px 11px repeat-y;
+  -webkit-mask:linear-gradient(180deg,#000,transparent); mask:linear-gradient(180deg,#000,transparent)}
+.card--soul .cover{background:linear-gradient(180deg,#FFFFFF,var(--washi))}
+.card--kanji .cover{background:linear-gradient(180deg,#FBFAF6,#EEEADF)}
+.card--kanji .cover .track{position:absolute; left:100px; right:70px; bottom:34px; height:2px; background:var(--ink-16)}
+.card--kanji .cover .cars{position:absolute; left:104px; bottom:38px; display:flex; gap:5px}
+.card--kanji .cover .cars i{width:18px; height:18px; border-radius:4px; background:rgba(122,138,92,.35)}
+.card--kanji .cover .cars i:first-child{background:var(--shu); opacity:.75}
+.card--naze .cover{background:linear-gradient(180deg,#F7F6F2,#E7E4DD)}
+.card--naze .cover .qs{position:absolute; left:104px; bottom:26px; display:flex; gap:6px; align-items:flex-end}
+.card--naze .cover .qs i{font-style:normal; font-size:var(--s); color:var(--ink-38)}
+.card--soul .cover .glyph{color:var(--kami); background:linear-gradient(155deg,#2F333B,var(--sumi)); box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 16px 26px -12px rgba(20,22,26,.6)}
+.card--kanji .cover .glyph{color:#fff; background:linear-gradient(155deg,var(--koke-lit),var(--koke)); box-shadow:inset 0 1px 0 rgba(255,255,255,.3), 0 16px 26px -12px rgba(122,138,92,.7)}
+.card--soon .cover .glyph{color:transparent; -webkit-text-stroke:1.2px var(--sumi)}
+.card__body{display:flex; flex-direction:column; gap:12px; padding:20px 24px 22px; flex:1}
+.card__title{display:flex; align-items:center; justify-content:space-between; gap:12px}
+.card h2{margin:0; font-size:21px; font-weight:600; letter-spacing:.12em; line-height:1.45}
+.card h2 span{display:block; font-family:var(--la); font-size:13px; font-weight:400; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-38); margin-top:2px}
+.card p{margin:0; font-size:13.5px; line-height:2.1; letter-spacing:.04em; color:var(--ink-60)}
+.card__go{margin-top:auto; padding-top:14px; border-top:1px solid var(--ink-16); display:flex; justify-content:space-between; font-family:var(--ut); font-size:12px; letter-spacing:.1em}
+.card__go i{font-style:normal; transition:transform .35s}
+.card:hover .card__go i{transform:translate(3px,-3px)}
+.badge{align-self:flex-start; font-family:var(--ut); font-size:10.5px; letter-spacing:.16em; padding:3px 10px; border:1px solid var(--ink-16); border-radius:99px; color:var(--ink-60)}
+.knob{flex:none; width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:linear-gradient(145deg,#FFFFFF,#E6E3DC);
+  box-shadow:5px 5px 12px rgba(20,22,26,.15), -4px -4px 10px rgba(255,255,255,.95)}
+.card:hover .dot--live{box-shadow:0 0 14px 5px rgba(233,184,112,.8), 0 0 40px 16px rgba(233,184,112,.34)}
+.dot{display:inline-block; width:12px; height:12px; border-radius:50%; background:linear-gradient(145deg,#CFCBC3,#EEEBE5); box-shadow:inset 1px 1px 2px rgba(0,0,0,.2)}
+.legend .dot{width:10px; height:10px}
+.dot--live{background:radial-gradient(circle at 40% 38%,#FFF8EA 0 28%,#F3D29A 55%,var(--lamp) 100%);
+  box-shadow:0 0 10px 3px rgba(233,184,112,.55), 0 0 24px 8px rgba(233,184,112,.22); animation:breathe 3.6s ease-in-out infinite}
+@keyframes breathe{50%{box-shadow:0 0 14px 5px rgba(233,184,112,.7), 0 0 32px 12px rgba(233,184,112,.28)}}
+
+/* ---------- news / payments / contact / company ---------- */
+.strip{margin-top:clamp(28px,6vh,56px); display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); gap:clamp(16px,2vw,24px); align-items:start}
+.news,.pay{padding:26px}
+.news ol{margin:14px 0 0; padding:0; list-style:none}
+.news li{display:grid; grid-template-columns:5.4em auto minmax(0,1fr); gap:0 12px; align-items:baseline; padding:12px 0; border-bottom:1px solid var(--ink-16)}
+.news li:last-child{border-bottom:0; padding-bottom:0}
+.news time{font-family:var(--la); font-size:14px; letter-spacing:.1em; color:var(--ink-38); white-space:nowrap}
+.tag{font-family:var(--ut); font-size:10px; letter-spacing:.12em; white-space:nowrap; padding:1px 9px; border:1px solid var(--ink-16); border-radius:99px; color:var(--ink-60)}
+.tag--co{border-color:var(--shu); color:var(--shu)}
+.news p{margin:0; font-size:13.5px; line-height:1.9; letter-spacing:.03em}
+.pay dl{margin:12px 0 0}
+.pay dl > div{padding:10px 0; border-bottom:1px solid var(--ink-16)}
+.pay dl > div:last-child{border-bottom:0; padding-bottom:0}
+.pay dt{font-family:var(--ut); font-size:10.5px; letter-spacing:.2em; color:var(--ink-38); margin-bottom:3px}
+.pay dd{margin:0; font-size:13px; line-height:1.9}
+.pay ul{margin:4px 0 0; padding:0; list-style:none; display:grid; gap:6px}
+.pay li{font-size:12.5px}
+.pay a{border-bottom:1px solid var(--ink-16); transition:border-color .3s}
+.pay a:hover{border-color:var(--koke)}
 .pay .muted{color:var(--ink-38)}
-
-/* ---------- contact ---------- */
-.contact{
-  margin-top:clamp(30px,5vh,56px); padding:clamp(22px,3vw,32px);
-  border:1px solid var(--sumi);
-  display:flex; flex-wrap:wrap; align-items:center; gap:18px 28px; justify-content:space-between;
-}
-.contact__t h2{margin:10px 0 0; font-size:clamp(18px,2.4vw,24px); font-weight:600; letter-spacing:.1em}
-.contact__t p{margin:8px 0 0; font-size:13px; line-height:1.95; letter-spacing:.03em; color:var(--ink-60); max-width:46ch}
-.mailto{
-  display:inline-flex; align-items:center; gap:10px; flex-shrink:0;
-  background:var(--koke); color:var(--kami); border:1px solid var(--koke);
-  padding:13px 22px; font-family:var(--ut); font-size:13px; letter-spacing:.06em;
-  transition:background .35s,color .35s;
-}
-.mailto:hover,.mailto:focus-visible{background:transparent; color:var(--koke)}
+.contact{margin-top:clamp(28px,6vh,56px); padding:clamp(26px,3.4vw,40px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px 32px}
+.contact h2{margin:12px 0 0; font-size:clamp(22px,2.6vw,30px); font-weight:600; letter-spacing:.12em}
+.contact p{margin:10px 0 0; max-width:44ch; font-size:13.5px; line-height:2.1; color:var(--ink-60)}
+.mailto{flex:none; display:inline-flex; align-items:center; gap:12px; padding:14px 26px; font-family:var(--ut); font-size:13.5px; letter-spacing:.12em;
+  color:var(--kami); background:var(--koke); border:1px solid var(--koke); transition:background .35s,color .35s}
+.mailto:hover{background:transparent; color:var(--koke)}
 .mailto i{font-style:normal}
-
-/* ---------- corporate footer ---------- */
-.foot{border-top:1px solid var(--ink-16); padding:clamp(28px,5vh,48px) 0 34px}
-.foot__wrap{width:var(--col); margin-inline:auto}
-.profile{margin:16px 0 0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 clamp(24px,4vw,56px)}
-.profile div{display:grid; grid-template-columns:7.5em minmax(0,1fr); gap:0 16px;
-  padding:9px 0; border-bottom:1px solid var(--ink-16)}
-.profile dt{font-family:var(--ut); font-size:11px; letter-spacing:.14em; color:var(--ink-38)}
+.foot{width:var(--col); margin:clamp(28px,6vh,56px) auto 0; padding-bottom:34px}
+.foot__panel{padding:26px}
+.profile{margin:14px 0 0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 clamp(24px,4vw,48px)}
+.profile > div{display:grid; grid-template-columns:7.5em minmax(0,1fr); gap:0 14px; padding:10px 0; border-bottom:1px solid var(--ink-16)}
+.profile dt{font-family:var(--ut); font-size:11px; letter-spacing:.16em; color:var(--ink-38)}
 .profile dd{margin:0; font-size:13px; letter-spacing:.03em}
 .profile a{border-bottom:1px solid var(--ink-16)}
-.copy{margin:22px 0 0; display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:space-between}
+.copy{margin:20px 4px 0; display:flex; flex-wrap:wrap; gap:6px 20px; justify-content:space-between; font-family:var(--ut); font-size:11px; letter-spacing:.06em; color:var(--ink-38)}
 
-@media(max-width:860px){
-  .cards{grid-template-columns:1fr}
-  .strip{grid-template-columns:1fr}
-  .contact{flex-direction:column; align-items:stretch}
-  .mailto{justify-content:center}
-  .news li{grid-template-columns:5.6em auto; row-gap:4px}
-  .news p{grid-column:1 / -1}
-  .card{min-height:0}
-  .profile{grid-template-columns:1fr}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr} .cards,.strip,.profile{grid-template-columns:1fr}
+  .stage{height:380px}
+  .bw--sm-hide{display:none}
+  .bw{left:var(--xs,var(--x)); top:var(--ys,var(--y))}
+  .dew{font-size:40px}
 }
-@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms !important}}
+@media(max-width:600px){
+  .top{gap:10px} .mark small{display:none} .book{padding:9px 12px; font-size:11px; letter-spacing:.12em}
+  .langs button{padding:5px 8px; font-size:10px; letter-spacing:.1em}
+  .bub{font-size:calc(var(--fs,15px) * .84)}
+  .news li{grid-template-columns:5.4em auto; row-gap:4px} .news p{grid-column:1/-1}
+  .contact{flex-direction:column; align-items:stretch} .mailto{justify-content:center}
+  .hero__seal{display:none}
+}
+@media(max-width:400px){ .book{display:none} }
+@media(prefers-reduced-motion:reduce){ .bub,.chain,.dot--live{animation:none} .bw,.card,.mailto{transition:none} }
+
 </style>
 </head>
 <body>
-
 <header class="top">
-  <div class="mark">
+  <a class="mark" href="#top">
+    <span class="mark__chip" aria-hidden="true" lang="ja">獨</span>
     <strong lang="ja">獨歩文化</strong>
     <small>Beyond Culture</small>
-  </div>
+  </a>
   <div class="langs" role="group" aria-label="Language">
     <button data-lang="ja" aria-pressed="true">日本語</button>
     <button data-lang="en" aria-pressed="false">EN</button>
     <button data-lang="zh" aria-pressed="false">繁中</button>
   </div>
+  <a class="book" href="#contact" data-en="Contact" data-zh="聯絡我們">お問い合わせ</a>
 </header>
-
 <main>
-  <section class="intro">
-    <p class="eyebrow">Beyond Culture 獨歩文化株式会社</p>
-    <h1 data-en="We build with culture in mind." data-zh="以技術，承續文化。">文化を、技術で継ぐ。</h1>
-    <p data-en="Beyond Culture builds AI-driven products around Japanese cultural practice — recording a life, and teaching children the written language. Three services are in operation, each with its own site."
-       data-zh="獨步文化以 AI 技術，打造貼近日本文化實踐的產品——留存一個人的一生，以及教孩子書寫的語言。目前營運三項服務，各有獨立網站。">
-      日本の文化的な営みを、AIの技術で支えるプロダクトをつくっています。
-      一人の生涯を記録すること、子どもが文字を身につけること。
-      現在、三つのサービスをそれぞれのサイトで運営しています。
-    </p>
+  <section class="hero">
+    <div class="hero__text" id="top">
+      <p class="eyebrow">Beyond Culture 獨歩文化株式会社</p>
+      <h1 data-en="We build with culture in mind." data-zh="&lt;span class=&quot;nb&quot;&gt;以技術，&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;承續文化。&lt;/span&gt;"><span class="nb">文化を、</span><span class="nb">技術で継ぐ。</span></h1>
+      <p class="hero__lede" data-en="Beyond Culture builds AI-driven products around Japanese cultural practice — recording a life, and teaching children the written language. Three services are in operation, each with its own site."
+         data-zh="獨步文化以 AI 技術，打造貼近日本文化實踐的產品——留存一個人的一生，以及教孩子書寫的語言。目前營運三項服務，各有獨立網站。">
+        日本の文化的な営みを、AIの技術で支えるプロダクトをつくっています。
+        一人の生涯を記録すること、子どもが文字を身につけること。
+        現在、三つのサービスをそれぞれのサイトで運営しています。
+      </p>
+    </div>
+    <div class="stage" data-depth aria-hidden="true" lang="ja">
+      <span class="chain" style="--x:6%;--h:62%;--g:14px;--o:.28;--t:8s"></span>
+      <span class="chain" style="--x:15%;--h:78%;--g:11px;--r:2px;--o:.34;--t:6s;--dl:-2s"></span>
+      <span class="chain" style="--x:27%;--h:54%;--g:16px;--o:.22;--t:9s;--dl:-1s"></span>
+      <span class="chain" style="--x:41%;--h:70%;--g:12px;--r:1.3px;--o:.3;--t:7s;--dl:-4s"></span>
+      <span class="chain" style="--x:56%;--h:84%;--g:13px;--r:2.2px;--o:.36;--t:8.5s;--dl:-3s"></span>
+      <span class="chain" style="--x:68%;--h:60%;--g:15px;--o:.24;--t:6.5s"></span>
+      <span class="chain" style="--x:79%;--h:74%;--g:12px;--r:1.8px;--o:.32;--t:7.5s;--dl:-5s"></span>
+      <span class="dew">記憶は水</span>
+
+      <div class="bw bw--far" style="--x:6%;--y:4%;--z:-260;--r:-3deg;--d:.25;--xs:2%;--ys:2%"><span class="bub" style="--t:8s">記憶</span></div>
+      <div class="bw bw--far" style="--x:52%;--y:2%;--z:-240;--r:4deg;--d:.25;--xs:62%;--ys:2%"><span class="bub bub--tr" lang="zh-Hant" style="--t:9s;--dl:-2s">傳承</span></div>
+      <div class="bw bw--far bw--sm-hide" style="--x:70%;--y:50%;--z:-280;--r:-2deg;--d:.2"><span class="bub bub--la bub--tr" style="--t:7.5s;--dl:-4s">Soul ID</span></div>
+      <div class="bw bw--far bw--sm-hide" style="--x:2%;--y:56%;--z:-250;--r:3deg;--d:.25"><span class="bub" style="--t:8.5s;--dl:-1s">一字ずつ</span></div>
+
+      <div class="bw bw--mid" style="--x:26%;--y:10%;--z:-60;--r:-3deg;--d:.6;--xs:22%;--ys:12%"><span class="bub bub--sumi" style="--fs:17px;--t:7s">魂の銘</span></div>
+      <div class="bw bw--mid" style="--x:50%;--y:20%;--z:-40;--r:3deg;--d:.6;--xs:46%;--ys:24%"><span class="bub bub--tr" style="--fs:16px;--t:6.5s;--dl:-2.5s">漢字でんしゃ</span></div>
+      <div class="bw bw--mid" style="--x:4%;--y:30%;--z:-90;--r:-2deg;--d:.55;--xs:2%;--ys:34%"><span class="bub bub--koke" style="--fs:15px;--t:8s;--dl:-1.5s">ナゼホリ</span></div>
+      <div class="bw bw--mid bw--sm-hide" style="--x:78%;--y:28%;--z:-70;--r:5deg;--d:.6"><span class="bub bub--shu bub--tr" style="--t:7s;--dl:-3.5s">なぜ？</span></div>
+
+      <div class="bw" style="--x:8%;--y:42%;--z:70;--r:-2deg;--d:1.1;--xs:3%;--ys:44%"><span class="bub" style="--fs:19px;--t:6s;--dl:-1s">記憶を、次の世代へ</span></div>
+      <div class="bw" style="--x:46%;--y:44%;--z:90;--r:3deg;--d:1.2;--xs:40%;--ys:52%"><span class="bub bub--ember bub--la bub--tr" style="--fs:20px;--t:6.8s;--dl:-3s">Beyond Culture</span></div>
+      <div class="bw" style="--x:26%;--y:58%;--z:40;--r:-3deg;--d:1;--xs:4%;--ys:62%"><span class="bub" style="--fs:16px;--t:7.2s;--dl:-2s">もう一段、深く。</span></div>
+      <div class="bw bw--sm-hide" style="--x:60%;--y:60%;--z:50;--r:2deg;--d:1"><span class="bub bub--deep bub--la bub--tr" style="--fs:15px;--t:7.6s;--dl:-1.2s">Thank you!</span></div>
+      <div class="bw bw--sm-hide" style="--x:74%;--y:14%;--z:30;--r:-6deg;--d:.9"><span class="bub bub--tr" lang="zh-Hant" style="--t:6.4s;--dl:-4s">提問</span></div>
+
+      <div class="bowl">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+          <path d="M8 16 Q250 44 492 16" fill="none" stroke="#14161A" stroke-width="6" stroke-linecap="round" opacity=".9"/>
+          <path d="M18 24 C40 110 130 146 250 146 C370 146 460 110 482 24" fill="none" stroke="#14161A" stroke-width="15" stroke-linecap="round"/>
+          <path d="M26 34 C50 110 136 138 250 138 C364 138 450 110 474 34 Z" fill="#14161A" opacity=".06"/>
+        </svg>
+      </div>
+      <div class="inside"><span>名</span><span>声</span><span>縁</span><span>恩</span></div>
+    </div>
+    <div class="hero__seal" aria-hidden="true"><span lang="ja">獨</span></div>
   </section>
 
-  <section class="cards">
-
-    <a class="card" href="https://soul-id.jp/" target="_blank" rel="noopener">
-      <span class="card__mark" aria-hidden="true" lang="ja">銘</span>
-      <span class="card__no">01</span>
-      <h2 lang="ja">魂の銘<span>Soul ID</span></h2>
-      <p data-en="A life preserved in photographs, voice and writing — portrait restoration, recorded interviews, autobiography and documentary film."
-         data-zh="以照片、聲音與文字留存一個人的一生——遺照修復、人生訪談、自傳與紀錄影片。">
-        一人の生涯を、写真と声と文章で残す。
-        遺影写真の修復、ライフインタビュー、自叙伝、ドキュメンタリー映像。
+  <section class="products">
+    <div class="products__head">
+      <p class="eyebrow" data-en="OUR SERVICES" data-zh="我們的服務">サービス</p>
+      <p class="legend">
+        <span><i class="dot dot--live" aria-hidden="true"></i><b data-en="Live" data-zh="營運中">公開中</b></span>
+        <span><i class="dot" aria-hidden="true"></i><b data-en="In preparation" data-zh="籌備中">準備中</b></span>
       </p>
-      <span class="card__go">soul-id.jp <i aria-hidden="true">↗</i></span>
-    </a>
-
-    <a class="card" href="https://kanji-ai.jp/" target="_blank" rel="noopener">
-      <span class="card__mark" aria-hidden="true" lang="ja">漢</span>
-      <span class="card__no">02</span>
-      <h2 lang="ja">漢字でんしゃ<span>Kanji Densha</span></h2>
-      <p data-en="A kanji-learning web app for primary school children: the 1,026 kanji of the MEXT curriculum, one character at a time across six years."
-         data-zh="為小學生設計的漢字學習網頁應用：依日本文部科學省課程的 1,026 個教育漢字，六年間逐字學習。">
-        小学生向けの漢字学習Webアプリ。
-        学年別漢字配当表の教育漢字1,026字を、六年かけて一字ずつ。
-      </p>
-      <span class="card__go">kanji-ai.jp <i aria-hidden="true">↗</i></span>
-    </a>
-
-    <a class="card card--soon" href="https://domo-ai.com/" target="_blank" rel="noopener">
-      <span class="card__mark" aria-hidden="true" lang="ja">問</span>
-      <span class="card__no">03</span>
-      <h2 lang="ja">ナゼホリ<span>Nazehori</span></h2>
-      <p data-en="Thinking practice for children in grades 3–4 and their parents — learning to ask the next question, and to dig one layer deeper."
-         data-zh="為小學三、四年級學童與家長設計的思考訓練——學會問出下一個問題，並且再深掘一層。">
-        小学3・4年生と保護者のための思考トレーニング。
-        次の問いを立てる力と、もう一段掘り下げる力を育てます。
-      </p>
-      <span class="badge" data-en="In preparation" data-zh="籌備中">準備中</span>
-      <span class="card__go">domo-ai.com <i aria-hidden="true">↗</i></span>
-    </a>
-
+    </div>
+    <div class="cards">
+      <a class="card card--soul" href="https://soul-id.jp/" target="_blank" rel="noopener">
+        <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:12%"></span><span class="ch" style="--x:30%"></span><span class="ch" style="--x:48%"></span><span class="glyph">銘</span><span class="seal">印</span><span class="g">魂の銘</span></div>
+        <div class="card__body">
+          <div class="card__title">
+            <h2 lang="ja">魂の銘<span>Soul ID</span></h2>
+            <span class="knob" aria-hidden="true"><i class="dot dot--live"></i></span>
+          </div>
+          <p data-en="A life preserved in photographs, voice and writing — portrait restoration, recorded interviews, autobiography and documentary film."
+             data-zh="以照片、聲音與文字留存一個人的一生——遺照修復、人生訪談、自傳與紀錄影片。">
+            一人の生涯を、写真と声と文章で残す。
+            遺影写真の修復、ライフインタビュー、自叙伝、ドキュメンタリー映像。
+          </p>
+          <span class="card__go">soul-id.jp <i aria-hidden="true">↗</i></span>
+        </div>
+      </a>
+      <a class="card card--kanji" href="https://kanji-ai.jp/" target="_blank" rel="noopener">
+        <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:14%"></span><span class="ch" style="--x:44%"></span><span class="glyph">漢</span><span class="track"></span><span class="cars"><i></i><i></i><i></i><i></i><i></i></span><span class="g">一字ずつ</span></div>
+        <div class="card__body">
+          <div class="card__title">
+            <h2 lang="ja">漢字でんしゃ<span>Kanji Densha</span></h2>
+            <span class="knob" aria-hidden="true"><i class="dot dot--live"></i></span>
+          </div>
+          <p data-en="A kanji-learning web app for primary school children: the 1,026 kanji of the MEXT curriculum, one character at a time across six years."
+             data-zh="為小學生設計的漢字學習網頁應用：依日本文部科學省課程的 1,026 個教育漢字，六年間逐字學習。">
+            小学生向けの漢字学習Webアプリ。
+            学年別漢字配当表の教育漢字1,026字を、六年かけて一字ずつ。
+          </p>
+          <span class="card__go">kanji-ai.jp <i aria-hidden="true">↗</i></span>
+        </div>
+      </a>
+      <a class="card card--naze card--soon" href="https://domo-ai.com/" target="_blank" rel="noopener">
+        <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:20%"></span><span class="ch" style="--x:38%"></span><span class="glyph">問</span><span class="qs"><i style="--s:14px">なぜ</i><i style="--s:17px">なぜ</i><i style="--s:21px">？</i></span><span class="g">もう一問</span></div>
+        <div class="card__body">
+          <div class="card__title">
+            <h2 lang="ja">ナゼホリ<span>Nazehori</span></h2>
+            <span class="knob" aria-hidden="true"><i class="dot"></i></span>
+          </div>
+          <p data-en="Thinking practice for children in grades 3–4 and their parents — learning to ask the next question, and to dig one layer deeper."
+             data-zh="為小學三、四年級學童與家長設計的思考訓練——學會問出下一個問題，並且再深掘一層。">
+            小学3・4年生と保護者のための思考トレーニング。
+            次の問いを立てる力と、もう一段掘り下げる力を育てます。
+          </p>
+          <span class="badge" data-en="In preparation" data-zh="籌備中">準備中</span>
+          <span class="card__go">domo-ai.com <i aria-hidden="true">↗</i></span>
+        </div>
+      </a>
+    </div>
   </section>
 
   <section class="strip">
-
-    <div class="news">
+    <div class="news panel">
       <p class="eyebrow" data-en="NEWS" data-zh="最新消息">お知らせ</p>
       <ol>
         <li>
@@ -253,18 +371,17 @@ main{flex:1; width:var(--col); margin-inline:auto; padding-block:clamp(44px,9vh,
         </li>
         <li>
           <time datetime="2026-09">2026.09</time>
-          <span class="tag" lang="ja">漢字でんしゃ</span>
+          <span class="tag tag--kanji" lang="ja">漢字でんしゃ</span>
           <p data-en="Kanji Densha is now open — free to try with no registration." data-zh="漢字でんしゃ 正式開放，無需註冊即可試用。">「漢字でんしゃ」を公開しました。登録なしでおためしいただけます。</p>
         </li>
         <li>
           <time datetime="2026-12">2026.12</time>
-          <span class="tag" lang="ja">ナゼホリ</span>
+          <span class="tag tag--naze" lang="ja">ナゼホリ</span>
           <p data-en="Nazehori, for grades 3–4, is scheduled to open in December 2026." data-zh="ナゼホリ（小學三、四年級）預計於 2026 年 12 月開放。">小学3・4年生向け「ナゼホリ」を2026年12月に公開予定です。</p>
         </li>
       </ol>
     </div>
-
-    <div class="pay">
+    <div class="pay panel">
       <p class="eyebrow" data-en="PAYMENTS" data-zh="付款與結算">お支払いについて</p>
       <dl>
         <div>
@@ -287,11 +404,10 @@ main{flex:1; width:var(--col); margin-inline:auto; padding-block:clamp(44px,9vh,
         </div>
       </dl>
     </div>
-
   </section>
 
-  <section class="contact">
-    <div class="contact__t">
+  <section class="contact panel" id="contact">
+    <div>
       <p class="eyebrow" data-en="CONTACT" data-zh="聯絡我們">お問い合わせ</p>
       <h2 data-en="Talk to us directly." data-zh="歡迎直接與我們聯繫。">直接、ご連絡ください。</h2>
       <p data-en="Enquiries about any of our services, partnerships, press or payment verification reach the representative directly. We reply within one business day."
@@ -307,7 +423,7 @@ main{flex:1; width:var(--col); margin-inline:auto; padding-block:clamp(44px,9vh,
 </main>
 
 <footer class="foot">
-  <div class="foot__wrap">
+  <div class="foot__panel panel">
     <p class="eyebrow" data-en="COMPANY" data-zh="公司資訊">会社概要</p>
     <dl class="profile">
       <div><dt data-en="Legal name" data-zh="商號">商号</dt><dd lang="ja">Beyond Culture 獨歩文化株式会社</dd></div>
@@ -318,10 +434,10 @@ main{flex:1; width:var(--col); margin-inline:auto; padding-block:clamp(44px,9vh,
       <div><dt data-en="Contact" data-zh="聯絡方式">連絡先</dt><dd><a href="mailto:brian@beyondculture.ai">brian@beyondculture.ai</a></dd></div>
       <div><dt data-en="Business" data-zh="營業項目">事業内容</dt><dd data-en="AI-driven cultural products; memorial photography, film and publishing; educational SaaS" data-zh="AI 文化事業；遺照、影像與出版；教育 SaaS">AIを活用した文化事業／遺影写真・映像・出版／教育向けSaaS</dd></div>
     </dl>
-    <div class="copy">
-      <span class="cap" data-en="Statutory notices are published on each product site." data-zh="特定商取引法相關表示，刊載於各產品網站。">特定商取引法に基づく表記は、各サービスのサイトに掲載しています。</span>
-      <span class="cap">© <span id="yr"></span> Beyond Culture 獨歩文化株式会社</span>
-    </div>
+  </div>
+  <div class="copy">
+    <span data-en="Statutory notices are published on each product site." data-zh="特定商取引法相關表示，刊載於各產品網站。">特定商取引法に基づく表記は、各サービスのサイトに掲載しています。</span>
+    <span>© <span id="yr"></span> Beyond Culture 獨歩文化株式会社</span>
   </div>
 </footer>
 
@@ -329,13 +445,10 @@ main{flex:1; width:var(--col); margin-inline:auto; padding-block:clamp(44px,9vh,
 (function(){
   "use strict";
   document.getElementById("yr").textContent=new Date().getFullYear();
-
   var nodes=[].slice.call(document.querySelectorAll("[data-en],[data-zh]"));
   nodes.forEach(function(n){ n.dataset.ja=n.innerHTML; });
-
   var tags={ja:"ja",en:"en",zh:"zh-Hant"};
   var btns=[].slice.call(document.querySelectorAll(".langs button"));
-
   function setLang(L){
     nodes.forEach(function(n){
       var v = L==="ja" ? n.dataset.ja : n.dataset[L];
@@ -345,13 +458,24 @@ main{flex:1; width:var(--col); margin-inline:auto; padding-block:clamp(44px,9vh,
     btns.forEach(function(b){ b.setAttribute("aria-pressed", String(b.dataset.lang===L)); });
     try{ localStorage.setItem("bc-lang",L); }catch(e){}
   }
-
   btns.forEach(function(b){ b.addEventListener("click",function(){ setLang(b.dataset.lang); }); });
-
   var saved=null;
   try{ saved=localStorage.getItem("bc-lang"); }catch(e){}
   if(saved && tags[saved]) setLang(saved);
   else if((navigator.language||"").toLowerCase().indexOf("zh")===0) setLang("zh");
+
+  /* gentle pointer depth on the hero scene */
+  var scene=document.querySelector("[data-depth]");
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(scene && !reduce && window.matchMedia("(pointer: fine)").matches){
+    var raf=0,tx=0,ty=0;
+    window.addEventListener("pointermove",function(e){
+      tx=(e.clientX/window.innerWidth)*2-1; ty=(e.clientY/window.innerHeight)*2-1;
+      if(!raf) raf=requestAnimationFrame(function(){
+        scene.style.setProperty("--px",tx.toFixed(3)); scene.style.setProperty("--py",ty.toFixed(3)); raf=0;
+      });
+    },{passive:true});
+  }
 })();
 </script>
 </body>
