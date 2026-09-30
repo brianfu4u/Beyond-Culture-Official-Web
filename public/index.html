@@ -217,6 +217,17 @@ html[lang="en"] .hero__lede{margin-top:20px}
 .field textarea{min-height:140px; resize:vertical; line-height:1.8}
 .field input:focus,.field textarea:focus{outline:none; border-color:var(--koke); box-shadow:0 0 0 3px rgba(122,138,92,.18)}
 .send{justify-content:center; width:100%; cursor:pointer}
+.send:disabled{opacity:.6; cursor:wait}
+.hp{position:absolute; left:-9999px; width:1px; height:1px; opacity:0}
+.form__status{margin:0; min-height:1.4em; font-family:var(--ut); font-size:12.5px; line-height:1.8; color:var(--ink-60)}
+.form__status.is-err{color:var(--shu)}
+.thanks{position:relative; align-self:stretch; display:grid; align-content:center; gap:12px; min-height:320px; padding:clamp(24px,3vw,40px); border-radius:14px;
+  background:rgba(255,255,255,.5); box-shadow:inset 0 0 0 1px rgba(20,22,26,.08), inset 0 1px 0 rgba(255,255,255,.9); outline:none}
+.thanks[hidden],.form[hidden]{display:none}
+.thanks__seal{width:44px; height:44px; display:grid; place-items:center; border:1.5px solid var(--shu); color:var(--shu); font-size:18px; font-weight:600}
+.contact .thanks__title{margin:6px 0 0; color:var(--sumi); max-width:none; font-size:clamp(22px,2.4vw,28px); font-weight:600; letter-spacing:.14em}
+.contact .thanks__body{margin:0; font-size:14px; line-height:2.1; color:var(--ink-60); max-width:36em}
+.contact .thanks__copy{margin:6px 0 0; max-width:none; padding-top:12px; border-top:1px solid var(--ink-16); font-family:var(--ut); font-size:12px; letter-spacing:.06em; color:var(--ink-38)}
 .contact h2{margin:12px 0 0; font-size:clamp(22px,2.6vw,30px); font-weight:600; letter-spacing:.12em}
 .contact p{margin:10px 0 0; max-width:44ch; font-size:13.5px; line-height:2.1; color:var(--ink-60)}
 .mailto{display:inline-flex; align-items:center; gap:12px; padding:14px 26px; font-family:var(--ut); font-size:13.5px; letter-spacing:.12em;
@@ -435,16 +446,24 @@ html[lang="en"] .hero__lede{margin-top:20px}
 
     <form class="form" id="contactForm" novalidate>
       <p class="form__title" data-en="Contact form" data-zh="聯絡表單">お問い合わせフォーム</p>
-      <p class="form__note" data-en="When you press send, your email app opens with everything filled in, addressed to us. Check it, then send."
-         data-zh="按下送出後，您的電子郵件程式將開啟並自動填入內容，確認後即可寄出。">ご入力後、送信ボタンを押すとお使いのメールソフトが開き、内容を確認のうえ送信いただけます。</p>
+      <p class="form__note" data-en="Your message goes straight to the representative. We reply within one business day."
+         data-zh="您的訊息將直接送達代表人，平日一個工作天內回覆。">送信いただいた内容は、代表者に直接届きます。平日1営業日以内にご返信いたします。</p>
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label class="field"><span><b data-en="Name" data-zh="姓名" style="font-weight:inherit">お名前</b><i class="req" aria-hidden="true">＊</i></span>
         <input name="name" type="text" autocomplete="name" required></label>
       <label class="field"><span><b data-en="Email address" data-zh="電子郵件" style="font-weight:inherit">メールアドレス</b><i class="req" aria-hidden="true">＊</i></span>
         <input name="email" type="email" autocomplete="email" required></label>
       <label class="field"><span><b data-en="Your message" data-zh="詢問內容" style="font-weight:inherit">お問い合わせ内容</b><i class="req" aria-hidden="true">＊</i></span>
         <textarea name="message" required></textarea></label>
-      <button class="mailto send" type="submit"><span data-en="Send by email" data-zh="以電子郵件寄送">メールで送信する</span></button>
+      <button class="mailto send" type="submit"><span data-en="Send" data-zh="送出">送信する</span></button>
+      <p class="form__status" role="status" aria-live="polite"></p>
     </form>
+    <div class="thanks" id="thanks" hidden tabindex="-1">
+      <span class="thanks__seal" aria-hidden="true" lang="ja">謝</span>
+      <p class="thanks__title"></p>
+      <p class="thanks__body"></p>
+      <p class="thanks__copy"></p>
+    </div>
   </section>
 </main>
 
@@ -490,16 +509,48 @@ html[lang="en"] .hero__lede{margin-top:20px}
   if(saved && tags[saved]) setLang(saved);
   else if((navigator.language||"").toLowerCase().indexOf("zh")===0) setLang("zh");
 
-  /* contact form: opens the visitor's mail app, addressed to the representative */
+  /* contact form — delivered by Web3Forms straight to brian@beyondculture.ai.
+     Paste the access key below. Until it is set, the form falls back to
+     opening the visitor's mail app, so the page never breaks. */
+  var W3F_KEY="b5def3ec-4dbb-4b89-939a-53aa6957f7ad";
+  var TX={
+    ja:{sending:"送信中…", t:"送信しました。", b:"お問い合わせありがとうございます。内容を確認のうえ、平日1営業日以内に brian@beyondculture.ai よりご返信いたします。", c:"お名前：", fail:"送信できませんでした。お手数ですが brian@beyondculture.ai へ直接メールをお送りください。"},
+    en:{sending:"Sending…", t:"Message sent.", b:"Thank you for getting in touch. We will reply from brian@beyondculture.ai within one business day.", c:"Name: ", fail:"We couldn't send your message. Please email brian@beyondculture.ai directly."},
+    zh:{sending:"傳送中…", t:"已送出。", b:"感謝您的來信。我們將於平日一個工作天內，由 brian@beyondculture.ai 回覆您。", c:"姓名：", fail:"訊息未能送出，請直接寄信至 brian@beyondculture.ai。"}
+  };
+  function L(){ var l=document.documentElement.lang; return l==="en"?"en":(l.indexOf("zh")===0?"zh":"ja"); }
   var form=document.getElementById("contactForm");
   if(form){
+    var btn=form.querySelector(".send"), status=form.querySelector(".form__status"), thanks=document.getElementById("thanks");
     form.addEventListener("submit",function(e){
       e.preventDefault();
+      status.textContent=""; status.classList.remove("is-err");
       if(!form.checkValidity()){ form.reportValidity(); return; }
       var n=form.elements.name.value.trim(), m=form.elements.email.value.trim(), t=form.elements.message.value.trim();
       var subject="Beyond Culture お問い合わせ / Inquiry — "+n;
-      var body="お名前 / Name: "+n+"\n"+"メール / Email: "+m+"\n\n"+t+"\n";
-      window.location.href="mailto:brian@beyondculture.ai?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+      if(W3F_KEY.indexOf("__")===0){ /* not configured yet: old behaviour */
+        window.location.href="mailto:brian@beyondculture.ai?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent("お名前 / Name: "+n+"\nメール / Email: "+m+"\n\n"+t+"\n");
+        return;
+      }
+      var tx=TX[L()], label=btn.innerHTML;
+      btn.disabled=true; btn.innerHTML="<span>"+tx.sending+"</span>";
+      fetch("https://api.web3forms.com/submit",{
+        method:"POST",
+        headers:{"Content-Type":"application/json","Accept":"application/json"},
+        body:JSON.stringify({access_key:W3F_KEY, subject:subject, from_name:"beyondculture.ai", name:n, email:m, replyto:m, message:t,
+          language:L(), botcheck:form.elements.botcheck.checked})
+      }).then(function(r){ return r.json().then(function(d){ return r.ok && d && d.success; }); })
+      .then(function(ok){
+        if(!ok) throw new Error("not ok");
+        thanks.querySelector(".thanks__title").textContent=tx.t;
+        thanks.querySelector(".thanks__body").textContent=tx.b;
+        thanks.querySelector(".thanks__copy").textContent=tx.c+n+" ／ "+m;
+        form.hidden=true; thanks.hidden=false; thanks.focus();
+      })
+      .catch(function(){
+        status.textContent=tx.fail; status.classList.add("is-err");
+        btn.disabled=false; btn.innerHTML=label;
+      });
     });
   }
 
