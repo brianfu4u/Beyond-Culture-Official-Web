@@ -163,6 +163,12 @@ html[lang="en"] .hero__lede{margin-top:20px}
 .card--naze .cover .qs i{font-style:normal; font-size:var(--s); color:var(--ink-38)}
 .card--soul .cover .glyph{color:var(--kami); background:linear-gradient(155deg,#2F333B,var(--sumi)); box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 16px 26px -12px rgba(20,22,26,.6)}
 .card--kanji .cover .glyph{color:#fff; background:linear-gradient(155deg,var(--koke-lit),var(--koke)); box-shadow:inset 0 1px 0 rgba(255,255,255,.3), 0 16px 26px -12px rgba(122,138,92,.7)}
+.card--ichirei .cover{background:linear-gradient(180deg,#FFFFFF,var(--washi))}
+.card--ichirei .cover .glyph{color:#fff; background:linear-gradient(155deg,#C9563F,var(--shu)); box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 16px 26px -12px rgba(176,58,43,.6)}
+.card--lens .cover{background:linear-gradient(180deg,#F7F9FA,#E4EAEE)}
+.card--lens .cover .glyph{color:#fff; background:linear-gradient(155deg,#7C9AB2,#46667F); box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 16px 26px -12px rgba(70,102,127,.6)}
+.card--map .cover{background:linear-gradient(180deg,#FCF8F2,#F0E7DA)}
+.card--map .cover .glyph{color:#fff; background:linear-gradient(155deg,var(--lamp),#C98A3E); box-shadow:inset 0 1px 0 rgba(255,255,255,.3), 0 16px 26px -12px rgba(201,138,62,.6)}
 .card--soon .cover .glyph{color:transparent; -webkit-text-stroke:1.2px var(--sumi)}
 .card__body{display:flex; flex-direction:column; gap:12px; padding:20px 24px 22px; flex:1}
 .card__title{display:flex; align-items:center; justify-content:space-between; gap:12px}
@@ -281,11 +287,11 @@ html[lang="en"] .hero__lede{margin-top:20px}
     <div class="hero__text" id="top">
       <p class="eyebrow">Beyond Culture 獨歩文化株式会社</p>
       <h1 data-en="We build with culture in mind." data-zh="&lt;span class=&quot;nb&quot;&gt;以技術，&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;承續文化。&lt;/span&gt;"><span class="nb">文化を、</span><span class="nb">技術で継ぐ。</span></h1>
-      <p class="hero__lede" data-en="Beyond Culture builds AI-driven products around Japanese cultural practice — recording a life, and teaching children the written language. Three services are in operation, each with its own site."
-         data-zh="獨步文化以 AI 技術，打造貼近日本文化實踐的產品——留存一個人的一生，以及教孩子書寫的語言。目前營運三項服務，各有獨立網站。">
+      <p class="hero__lede" data-en="Beyond Culture builds AI-driven products around Japanese cultural practice — recording a life, and helping children learn the written language and think for themselves. Six services are in operation, each with its own site."
+         data-zh="獨步文化以 AI 技術，打造貼近日本文化實踐的產品——留存一個人的一生，以及幫助孩子學習文字、培養獨立思考的能力。目前營運六項服務，各有獨立網站。">
         日本の文化的な営みを、AIの技術で支えるプロダクトをつくっています。
-        一人の生涯を記録すること、子どもが文字を身につけること。
-        現在、三つのサービスをそれぞれのサイトで運営しています。
+        一人の生涯を記録すること、子どもが文字を身につけ、自分で考える力を育てること。
+        現在、六つのサービスをそれぞれのサイトで運営しています。
       </p>
     </div>
     <div class="stage" data-depth aria-hidden="true" lang="ja">
@@ -349,6 +355,20 @@ html[lang="en"] .hero__lede{margin-top:20px}
           <span class="card__go">soul-id.jp <i aria-hidden="true">↗</i></span>
         </div>
       </a>
+      <a class="card card--ichirei" href="https://ichirei.soul-id.jp/" target="_blank" rel="noopener">
+        <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:16%"></span><span class="ch" style="--x:36%"></span><span class="glyph">礼</span><span class="seal">印</span><span class="g">一字礼</span></div>
+        <div class="card__body">
+          <div class="card__title">
+            <h2 lang="ja">一字礼<span>ICHIREI</span></h2>
+            <span class="knob" aria-hidden="true"><i class="dot dot--live"></i></span>
+          </div>
+          <p data-en="A keepsake for a 60th birthday (kanreki) that captures sixty years of a life in a single character. A new service from Soul ID."
+             data-zh="為六十大壽（還曆）準備的紀念禮物——將六十年的人生凝聚成一個字。魂の銘的新服務。">
+            還暦の記念に、六十年の歩みを一文字に込めて贈る記念の品。魂の銘の新しいサービスです。
+          </p>
+          <span class="card__go">ichirei.soul-id.jp <i aria-hidden="true">↗</i></span>
+        </div>
+      </a>
       <a class="card card--kanji" href="https://kanji-ai.jp/" target="_blank" rel="noopener">
         <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:14%"></span><span class="ch" style="--x:44%"></span><span class="glyph">漢</span><span class="track"></span><span class="cars"><i></i><i></i><i></i><i></i><i></i></span><span class="g">一字ずつ</span></div>
         <div class="card__body">
@@ -364,7 +384,7 @@ html[lang="en"] .hero__lede{margin-top:20px}
           <span class="card__go">kanji-ai.jp <i aria-hidden="true">↗</i></span>
         </div>
       </a>
-      <a class="card card--naze" href="https://domo-ai.com/" target="_blank" rel="noopener">
+      <a class="card card--naze" href="https://domo-ai.com/nazehori/" target="_blank" rel="noopener">
         <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:20%"></span><span class="ch" style="--x:38%"></span><span class="glyph">問</span><span class="qs"><i style="--s:14px">なぜ</i><i style="--s:17px">なぜ</i><i style="--s:21px">？</i></span><span class="g">もう一問</span></div>
         <div class="card__body">
           <div class="card__title">
@@ -376,7 +396,35 @@ html[lang="en"] .hero__lede{margin-top:20px}
             小学3・4年生と保護者のための思考トレーニング。
             次の問いを立てる力と、もう一段掘り下げる力を育てます。
           </p>
-          <span class="card__go">domo-ai.com <i aria-hidden="true">↗</i></span>
+          <span class="card__go">domo-ai.com/nazehori <i aria-hidden="true">↗</i></span>
+        </div>
+      </a>
+      <a class="card card--lens" href="https://lens.domo-ai.com/" target="_blank" rel="noopener">
+        <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:16%"></span><span class="ch" style="--x:36%"></span><span class="glyph">視</span><span class="g">見方</span></div>
+        <div class="card__body">
+          <div class="card__title">
+            <h2 lang="ja">視点レンズ<span>The Lens</span></h2>
+            <span class="knob" aria-hidden="true"><i class="dot dot--live"></i></span>
+          </div>
+          <p data-en="A math course that changes how students look at a problem before they solve it, with three courses for junior high, high school and university entrance exams."
+             data-zh="解題之前，先換個角度看的數學課程。國中、高中、大學入學考試三門課程。">
+            解き方の前に、見方を変える算数・数学の講座。中学受験・高校受験・大学受験の3コース。
+          </p>
+          <span class="card__go">lens.domo-ai.com <i aria-hidden="true">↗</i></span>
+        </div>
+      </a>
+      <a class="card card--map" href="https://tsumazuki.domo-ai.com/" target="_blank" rel="noopener">
+        <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:16%"></span><span class="ch" style="--x:36%"></span><span class="glyph">図</span><span class="g">撮るだけ</span></div>
+        <div class="card__body">
+          <div class="card__title">
+            <h2 lang="ja">つまずきマップ<span>Stumble Map</span></h2>
+            <span class="knob" aria-hidden="true"><i class="dot dot--live"></i></span>
+          </div>
+          <p data-en="Snap a photo of homework or a test, and the units your child stumbled on appear on a map, so you know what to review. Math for grades 1 to 12."
+             data-zh="只要拍下作業或考卷，卡住的單元就會標在地圖上，馬上知道該複習什麼。國小一年級到高中三年級的數學。">
+            宿題やテストを撮るだけで、つまずいた単元が地図に並び、何を復習すればいいかがわかるアプリ。小1〜高3の算数・数学。
+          </p>
+          <span class="card__go">tsumazuki.domo-ai.com <i aria-hidden="true">↗</i></span>
         </div>
       </a>
     </div>
@@ -401,6 +449,26 @@ html[lang="en"] .hero__lede{margin-top:20px}
           <span class="tag tag--naze" lang="ja">ナゼホリ</span>
           <p data-en="Nazehori Beginner Course for grades 3–4 and their parents is now open. Lesson 1 is free to try." data-zh="為小學三、四年級學童與家長設計的「ナゼホリ 入門コース」正式開放，第 1 課可免費試用。">小学3・4年生と保護者のための「ナゼホリ 入門コース」を公開しました。レッスン1は無料でおためしいただけます。</p>
         </li>
+        <li>
+          <time datetime="2026-10">2026.10</time>
+          <span class="tag" lang="ja">視点レンズ</span>
+          <p data-en="The Lens, a math course for junior high, high school and university entrance exams, is now open. The first lens is free to try for 3 days." data-zh="國中、高中、大學入學考試數學課程「視角透鏡」正式開放，第一個透鏡可免費試用 3 天。">中学受験・高校受験・大学受験の算数・数学講座「視点レンズ」を公開しました。最初のレンズは3日間無料でおためしいただけます。</p>
+        </li>
+        <li>
+          <time datetime="2026-10">2026.10</time>
+          <span class="tag" lang="ja">書籍</span>
+          <p data-en="Three The Lens workbooks (junior high, high school and university entrance exams) are now on sale on Amazon." data-zh="「視角透鏡」問題集 3 冊（國中、高中、大學入學考試）已在 Amazon 上市。">「視点レンズ」の問題集3冊（中学受験・高校入試・大学入試）をAmazonで発売しました。</p>
+        </li>
+        <li>
+          <time datetime="2026-10">2026.10</time>
+          <span class="tag" lang="ja">つまずきマップ</span>
+          <p data-en="Stumble Map is now open: snap homework to know what to review. The first 30 photos are free." data-zh="拍照就知道該複習什麼的應用「卡點地圖」正式上線，前 30 張免費試用。">撮るだけで何を復習すればいいかわかるアプリ「つまずきマップ」を公開しました。30枚まで無料でおためしいただけます。</p>
+        </li>
+        <li>
+          <time datetime="2026-10">2026.10</time>
+          <span class="tag" lang="ja">ICHIREI</span>
+          <p data-en="The ICHIREI site for 60th-birthday keepsakes is now open." data-zh="還曆紀念禮物「ICHIREI 一字礼」網站正式上線。">還暦の記念品「ICHIREI 一字礼」のサイトを公開しました。</p>
+        </li>
       </ol>
     </div>
     <div class="pay panel">
@@ -412,7 +480,7 @@ html[lang="en"] .hero__lede{margin-top:20px}
         </div>
         <div>
           <dt data-en="Methods" data-zh="付款方式">対応決済手段</dt>
-          <dd data-en="Kanji Densha / Nazehori (official online store): credit card (Visa, Mastercard, American Express, JCB), Apple Pay, Google Pay, Shop Pay, PayPal&lt;br&gt;Soul ID (individual quotation): bank transfer" data-zh="漢字でんしゃ／ナゼホリ（官方線上商店）：信用卡（Visa、Mastercard、American Express、JCB）、Apple Pay、Google Pay、Shop Pay、PayPal&lt;br&gt;魂の銘（個別報價）：銀行轉帳">漢字でんしゃ／ナゼホリ（公式オンラインストア）：クレジットカード（Visa・Mastercard・American Express・JCB）、Apple Pay、Google Pay、Shop Pay、PayPal<br>魂の銘（個別お見積り）：銀行振込</dd>
+          <dd data-en="Kanji Densha / Nazehori / The Lens / Stumble Map (official online store): credit card (Visa, Mastercard, American Express, JCB), Apple Pay, Google Pay, Shop Pay, PayPal&lt;br&gt;Soul ID (individual quotation): bank transfer" data-zh="漢字でんしゃ／ナゼホリ／視角透鏡／卡點地圖（官方線上商店）：信用卡（Visa、Mastercard、American Express、JCB）、Apple Pay、Google Pay、Shop Pay、PayPal&lt;br&gt;魂の銘（個別報價）：銀行轉帳">漢字でんしゃ／ナゼホリ／視点レンズ／つまずきマップ（公式オンラインストア）：クレジットカード（Visa・Mastercard・American Express・JCB）、Apple Pay、Google Pay、Shop Pay、PayPal<br>魂の銘（個別お見積り）：銀行振込</dd>
         </div>
         <div>
           <dt data-en="Statutory notices" data-zh="特定商取引法表示">特定商取引法に基づく表記</dt>
@@ -421,7 +489,7 @@ html[lang="en"] .hero__lede{margin-top:20px}
               <li><a href="https://soul-id.jp/#legal" target="_blank" rel="noopener"><span lang="ja">魂の銘</span> — soul-id.jp</a></li>
               <li><a href="https://kanji-ai.jp/tokushoho.html" target="_blank" rel="noopener"><span lang="ja">漢字でんしゃ</span> — kanji-ai.jp</a></li>
               <li><a href="https://domo-ai.com/legal/tokushoho/" target="_blank" rel="noopener"><span lang="ja">ナゼホリ</span> — domo-ai.com</a></li>
-              <li><a href="https://soul-id-2.myshopify.com/policies/legal-notice" target="_blank" rel="noopener"><span data-en="Official online store" data-zh="官方線上商店">公式オンラインストア</span> — soul-id-2.myshopify.com</a></li>
+              <li><a href="https://soul-id-2.myshopify.com/policies/legal-notice" target="_blank" rel="noopener"><span data-en="The Lens / Stumble Map (official online store)" data-zh="視角透鏡・卡點地圖（官方線上商店）">視点レンズ・つまずきマップ（公式オンラインストア）</span> — soul-id-2.myshopify.com</a></li>
             </ul>
           </dd>
         </div>
