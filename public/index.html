@@ -894,12 +894,16 @@ html[lang="en"] .bk--en{order:-1}
     loadFonts(L); if(typeof resetCore==="function") resetCore();
     btns.forEach(function(b){ b.setAttribute("aria-pressed", String(b.dataset.lang===L)); });
     try{ localStorage.setItem("bc-lang",L); }catch(e){}
+    try{ var u=new URL(location.href); u.searchParams.set("lang",L); history.replaceState(null,"",u.toString()); }catch(e){}
   }
   btns.forEach(function(b){ b.addEventListener("click",function(){ setLang(b.dataset.lang); }); });
   var saved=null;
   try{ saved=localStorage.getItem("bc-lang"); }catch(e){}
   var nl=(navigator.language||"").toLowerCase();
-  if(saved && tags[saved]) setLang(saved);
+  var qp=null; try{ qp=new URLSearchParams(location.search).get("lang"); }catch(e){}
+  if(qp==="zh-hant"||qp==="tw") qp="zh"; if(qp==="zh-hans"||qp==="cn") qp="zs";
+  if(qp && tags[qp]) setLang(qp);
+  else if(saved && tags[saved]) setLang(saved);
   else setLang("ja"); /* Japanese is the default for every visitor; a language they pick is remembered */
 
   /* contact form — delivered by Web3Forms straight to brian@beyondculture.ai.
