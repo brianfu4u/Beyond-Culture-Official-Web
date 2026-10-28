@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-skin="i">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Beyond Culture 獨歩文化株式会社</title>
-<meta name="description" content="日本の文化的な営みを、AIの技術で支えるプロダクトをつくっています。魂の銘（Soul ID）／漢字でんしゃ／ナゼホリ。">
+<title>Beyond Culture 獨歩文化｜AIの時代に、人間であることを鍛える。</title>
+<meta name="description" content="考える・問う・筋道を立てる・感じる。AIには代われない四つの力を鍛える道具を、日本でつくっています。漢字、問い、数学、そして人生の一字まで。">
+<meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Noto+Sans+JP:wght@100;200&display=swap" rel="stylesheet">
@@ -62,15 +63,6 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 .mark__chip{flex:none; width:30px; height:30px; display:grid; place-items:center; font-size:15px; font-weight:600; color:var(--shu); border:1.5px solid var(--shu); background:rgba(255,255,255,.5)}
 .mark strong{font-size:17px; font-weight:600; letter-spacing:.22em; white-space:nowrap}
 .mark small{font-family:var(--la); font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-38); white-space:nowrap}
-.socials{display:flex; align-items:center; gap:6px}
-.socials--hero{display:none; margin-top:18px; gap:10px}
-.socials--hero .soc{width:40px; height:40px}
-.socials--hero .soc svg{width:18px; height:18px}
-.soc{display:grid; place-items:center; width:34px; height:34px; border-radius:99px; background:#E0D9CC; color:var(--sumi); transition:background .3s,color .3s}
-.soc svg{width:16px; height:16px; fill:currentColor}
-.soc:hover{background:var(--sumi); color:var(--kami)}
-.profile .socrow{display:flex; gap:8px; align-items:center}
-.profile .socrow a{border-bottom:0}
 .langs{display:flex; align-items:center; gap:3px; border-radius:99px; padding:4px; background:#E0D9CC;
   box-shadow:inset 2px 2px 5px rgba(20,22,26,.12), inset -2px -2px 5px rgba(255,255,255,.85)}
 .langs button{font-family:var(--ut); font-size:10.5px; letter-spacing:.18em; padding:5px 11px; border-radius:99px; color:var(--ink-38); transition:.3s}
@@ -172,12 +164,8 @@ html[lang="en"] .hero__lede{margin-top:20px}
 .card--naze .cover .qs i{font-style:normal; font-size:var(--s); color:var(--ink-38)}
 .card--soul .cover .glyph{color:var(--kami); background:linear-gradient(155deg,#2F333B,var(--sumi)); box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 16px 26px -12px rgba(20,22,26,.6)}
 .card--kanji .cover .glyph{color:#fff; background:linear-gradient(155deg,var(--koke-lit),var(--koke)); box-shadow:inset 0 1px 0 rgba(255,255,255,.3), 0 16px 26px -12px rgba(122,138,92,.7)}
-.card--ichirei .cover{background:linear-gradient(180deg,#FFFFFF,var(--washi))}
-.card--ichirei .cover .glyph{color:#fff; background:linear-gradient(155deg,#C9563F,var(--shu)); box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 16px 26px -12px rgba(176,58,43,.6)}
-.card--lens .cover{background:linear-gradient(180deg,#F7F9FA,#E4EAEE)}
-.card--lens .cover .glyph{color:#fff; background:linear-gradient(155deg,#7C9AB2,#46667F); box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 16px 26px -12px rgba(70,102,127,.6)}
-.card--map .cover{background:linear-gradient(180deg,#FCF8F2,#F0E7DA)}
-.card--map .cover .glyph{color:#fff; background:linear-gradient(155deg,var(--lamp),#C98A3E); box-shadow:inset 0 1px 0 rgba(255,255,255,.3), 0 16px 26px -12px rgba(201,138,62,.6)}
+.card--plain .cover{background:linear-gradient(180deg,#F7F6F2,#E7E4DD)}
+.card--plain .cover .glyph{color:var(--kami); background:linear-gradient(155deg,#2F333B,var(--sumi)); box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 16px 26px -12px rgba(20,22,26,.6)}
 .card--soon .cover .glyph{color:transparent; -webkit-text-stroke:1.2px var(--sumi)}
 .card__body{display:flex; flex-direction:column; gap:12px; padding:20px 24px 22px; flex:1}
 .card__title{display:flex; align-items:center; justify-content:space-between; gap:12px}
@@ -268,7 +256,6 @@ html[lang="en"] .hero__lede{margin-top:20px}
 @media(max-width:600px){
   .top{gap:10px} .mark small{display:none} .book{padding:9px 12px; font-size:11px; letter-spacing:.12em}
   .langs button{padding:5px 8px; font-size:10px; letter-spacing:.1em}
-  .top .socials{display:none} .socials--hero{display:flex}
   .bub{font-size:calc(var(--fs,15px) * .84)}
   .news li{grid-template-columns:5.4em auto; row-gap:4px} .news p{grid-column:1/-1}
   .hero__seal{display:none}
@@ -276,6 +263,307 @@ html[lang="en"] .hero__lede{margin-top:20px}
 @media(max-width:400px){ .book{display:none} }
 @media(prefers-reduced-motion:reduce){ .bub,.chain,.dot--live{animation:none} .bw,.card,.mailto{transition:none} }
 
+
+/* ===== v2: philosophy-first layout (see DESIGN.md) ===== */
+body{background:linear-gradient(180deg,#F1EEE6 0%,#E9E5DA 100%)}
+.panel{backdrop-filter:none; -webkit-backdrop-filter:none; background:rgba(255,255,255,.62); box-shadow:0 0 0 1px var(--ink-16)}
+.hero{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); padding-block:clamp(28px,6vh,64px) clamp(24px,5vh,56px); align-items:center}
+.hero h1{font-size:clamp(28px,3.5vw,48px); letter-spacing:.2em}
+html[lang="zh-Hant"] .hero h1{font-size:clamp(26px,3.1vw,42px)}
+html[lang="en"] .hero h1{font-size:clamp(30px,3.6vw,50px); line-height:1.25}
+.hero__lede{font-size:14.5px}
+.tcy{text-combine-upright:all; -webkit-text-combine:horizontal}
+.pearl__l{background:#F1EEE6; border-radius:4px; padding:1px 4px}
+.ring{position:relative; width:min(100%,600px); aspect-ratio:1; margin-inline:auto}
+.ring__thread{position:absolute; inset:0; width:100%; height:100%; overflow:visible}
+.ring__thread circle{fill:none; stroke:var(--sumi); stroke-width:.35; stroke-dasharray:1; stroke-dashoffset:1; animation:draw 1.8s ease-out .2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.clasp{position:absolute; left:50%; top:9%; width:34px; height:34px; transform:translate(-50%,-50%); border:1.5px solid var(--shu); background:var(--kami); color:var(--shu); display:grid; place-items:center; font-size:17px; font-weight:800; z-index:2}
+.core{position:absolute; left:50%; top:50%; width:46%; transform:translate(-50%,-50%); text-align:center}
+.core__k{margin:0; font-size:clamp(17px,2vw,24px); font-weight:800; line-height:1.7; letter-spacing:.12em}
+.core__h{margin:12px 0 0; font-family:var(--ut); font-size:12px; letter-spacing:.2em; color:var(--ink-60)}
+.core__body{animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.core .tip__n{display:block; font-size:clamp(18px,2vw,24px); font-weight:800; letter-spacing:.1em}
+.core .tip__v{display:block; margin:2px 0 8px; font-family:var(--ut); font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-38)}
+.core .tip__p{display:block; font-size:13.5px; line-height:1.9; color:var(--ink-60)}
+.core .tip__a{display:inline-block; margin-top:12px; font-family:var(--ut); font-size:12px; letter-spacing:.14em; color:var(--shu); border-bottom:1px solid var(--shu)}
+.pearl{position:absolute; left:var(--x); top:var(--y); transform:translate(-50%,-50%); width:84px; text-align:center; cursor:pointer; outline:none; opacity:0; animation:pop .6s ease calc(1.2s + var(--i)*.18s) forwards}
+@keyframes pop{from{opacity:0;transform:translate(-50%,-50%) scale(.8)}to{opacity:1;transform:translate(-50%,-50%)}}
+.pearl__c{display:grid; place-items:center; width:68px; height:68px; margin:0 auto 6px; border-radius:50%; background:#fff; border:1.5px solid var(--sumi); font-size:30px; font-weight:800; line-height:1; transition:transform .3s, box-shadow .3s, background .3s}
+.pearl__n{position:absolute; left:6px; top:-6px; font-size:12px; color:var(--ink-38)}
+.pearl--late .pearl__c{border-color:var(--shu); color:var(--shu)}
+.pearl:hover .pearl__c,.pearl:focus-visible .pearl__c,.pearl.is-on .pearl__c{transform:translateY(-4px); box-shadow:0 12px 22px -12px rgba(20,22,26,.5); background:var(--kami)}
+.pearl:focus-visible .pearl__c{outline:2px solid var(--koke); outline-offset:3px}
+.pearl__l{display:block; font-size:12px; font-weight:600; line-height:1.4; letter-spacing:.06em}
+.pearl__l small{display:block; font-family:var(--ut); font-size:10.5px; font-weight:400; letter-spacing:.2em; color:var(--ink-38)}
+.tip{display:none} .core__def{display:none}
+.products{margin-top:clamp(24px,5vh,56px)}
+.products__head{display:flex; flex-wrap:wrap; gap:14px 28px; align-items:baseline; justify-content:space-between}
+.thread{margin:0; display:flex; flex-wrap:wrap; gap:8px; align-items:center; font-size:15px; letter-spacing:.14em}
+.thread i{font-style:normal; color:var(--ink-38)}
+.thread .late{color:var(--shu)}
+.doors{margin-top:22px; display:grid; grid-template-columns:minmax(0,1.9fr) minmax(0,1fr); gap:clamp(16px,2.2vw,28px); align-items:start}
+.door{border-top:2px solid var(--sumi); padding-top:18px}
+.door--late{border-top-color:var(--shu)}
+.door__h h2{margin:0; font-size:clamp(18px,1.7vw,22px); font-weight:800; letter-spacing:.08em; line-height:1.6}
+.door__h p{margin:4px 0 0; color:var(--ink-60); font-size:14px}
+.door__c{margin-top:18px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px}
+.door--late .door__c{grid-template-columns:1fr}
+.door__gap{margin:16px 0 0; font-size:12.5px; color:var(--ink-38); line-height:1.9}
+a.pc{color:inherit; cursor:pointer}
+.pc{display:flex; flex-direction:column; gap:8px; padding:20px 20px 18px; border-radius:6px; background:var(--kami); box-shadow:0 0 0 1px var(--ink-16); transition:box-shadow .3s, transform .3s}
+.pc:hover{box-shadow:0 0 0 1px var(--sumi), 0 18px 30px -22px rgba(20,22,26,.5); transform:translateY(-2px)}
+.pc__top{display:flex; align-items:center; justify-content:space-between}
+.pc__c{display:grid; place-items:center; width:46px; height:46px; border-radius:50%; border:1.5px solid var(--sumi); background:#fff; font-size:22px; font-weight:800}
+.pc--late .pc__c{border-color:var(--shu); color:var(--shu)}
+.pc__no{font-family:var(--ut); font-size:12px; letter-spacing:.14em; color:var(--ink-60)}
+.pc h3{margin:6px 0 0; font-size:20px; font-weight:800; letter-spacing:.06em}
+.pc h3 small{display:block; font-family:var(--la); font-size:12px; font-weight:400; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-38)}
+.pc__aud{margin:0; align-self:flex-start; font-family:var(--ut); font-size:11px; letter-spacing:.12em; padding:2px 10px; border:1px solid var(--ink-16); border-radius:99px; color:var(--ink-60)}
+.pc__p{margin:0; font-size:14.5px; line-height:1.9}
+.pc__bk{margin:0; font-size:12px; line-height:1.8; color:var(--ink-38)}
+.pc__f{margin-top:auto; padding-top:12px; border-top:1px solid var(--ink-16); display:flex; align-items:center; justify-content:space-between; gap:10px}
+.pc__pr{font-family:var(--ut); font-size:13px; letter-spacing:.06em; color:var(--ink-60)}
+.pc__go{font-family:var(--ut); font-size:13px; letter-spacing:.1em; font-weight:500; padding:7px 14px; background:var(--sumi); color:var(--kami); border-radius:99px; white-space:nowrap; transition:background .3s}
+.pc--late .pc__go{background:var(--shu)}
+.pc__go i{font-style:normal}
+.pc__go:hover{background:var(--sumi-soft)}
+.phil{margin-top:clamp(40px,8vh,88px); padding:clamp(32px,6vw,72px) clamp(22px,5vw,64px); background:var(--sumi); color:var(--kami); border-radius:6px}
+.phil .eyebrow{color:rgba(245,243,238,.5)}
+.phil h2{margin:14px 0 0; font-size:clamp(22px,2.8vw,36px); font-weight:800; letter-spacing:.08em; line-height:1.6}
+.phil__g{margin-top:30px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(20px,4vw,56px)}
+.phil__g h3{margin:0 0 8px; font-size:14px; letter-spacing:.2em; color:var(--lamp); font-weight:600}
+.phil__g p{margin:0; font-size:15px; line-height:2.1; color:rgba(245,243,238,.82)}
+.phil__p{list-style:none; margin:36px 0 0; padding:0; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px}
+.phil__p li{border-top:1px solid rgba(245,243,238,.28); padding-top:14px}
+.phil__p b{display:block; font-size:15px; letter-spacing:.06em; margin-bottom:6px}
+.phil__p span{font-size:13px; line-height:1.9; color:rgba(245,243,238,.7)}
+.book{background:var(--shu); border-color:var(--shu)} .book:hover{color:var(--shu); background:transparent}
+@media(max-width:1000px){ .doors{grid-template-columns:1fr} .phil__p{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr}
+  html[lang="ja"] .hero h1,html[lang="zh-Hant"] .hero h1{font-size:clamp(26px,7.4vw,40px)}
+  .ring{aspect-ratio:auto; width:100%; display:grid; gap:0; padding-left:26px; border-left:1.5px solid var(--sumi); margin-left:8px}
+  .ring__thread,.core,.clasp{display:none}
+  .pearl{position:relative; left:auto; top:auto; transform:none; width:auto; text-align:left; display:grid; grid-template-columns:62px 1fr; column-gap:16px; padding:14px 0; opacity:1; animation:none}
+  .pearl__c{width:56px; height:56px; margin:0; grid-row:1 / span 2; font-size:26px}
+  .pearl__n{display:none}
+  .pearl__l{display:none}
+  .tip{display:block}
+  .tip__n{display:block; font-size:17px; font-weight:800}
+  .tip__v{font-family:var(--ut); font-size:11px; letter-spacing:.3em; color:var(--ink-38)}
+  .tip__p{display:block; font-size:14px; line-height:1.8; color:var(--ink-60)}
+  .tip__a{display:none}
+  .door__c{grid-template-columns:1fr}
+  .phil__g{grid-template-columns:1fr}
+}
+@media(max-width:560px){ .phil__p{grid-template-columns:1fr} }
+@media(prefers-reduced-motion:reduce){ .ring__thread circle{animation:none; stroke-dashoffset:0} .pearl{animation:none; opacity:1} .core__body{animation:none} }
+.nav{display:flex; gap:20px; font-family:var(--ut); font-size:13px; letter-spacing:.16em} .nav a:hover{color:var(--shu)} @media(max-width:720px){.nav{display:none}}
+
+html[data-skin] .send{background:var(--shu); border-color:var(--shu)}
+html[data-skin] .book{background:var(--shu); border-color:var(--shu); color:#fff}
+html[data-skin] ::selection{background:var(--shu); color:#fff}
+
+/* SKIN I — Pastel bento (Notion/Pinterest): coloured tiles, soft, playful */
+html[data-skin="i"]{--sumi:#1f1d1a; --sumi-soft:#4a4640; --kami:#fff; --washi:#fffaf2; --shu:#e8553d; --koke:#e8553d; --lamp:#ffd9a8;
+ --ink-60:#5f5a52; --ink-38:#8f897e; --ink-16:#eadfce; --ink-08:#f1e8d9}
+html[data-skin="i"] body{background:#fffaf2}
+html[data-skin="i"] .top{background:rgba(255,250,242,.92); border-bottom:1px solid #eadfce}
+html[data-skin="i"] .panel{background:#fff; box-shadow:0 0 0 1px #eadfce; border-radius:28px}
+html[data-skin="i"] .ring__thread circle{stroke:#1f1d1a; stroke-width:.4; stroke-dasharray:1}
+html[data-skin="i"] .pearl__c{border:0; box-shadow:0 6px 16px -4px rgba(0,0,0,.2)}
+html[data-skin="i"] .pearl:nth-child(n){background:none}
+html[data-skin="i"] .pearl--late .pearl__c{background:#e8553d; color:#fff}
+html[data-skin="i"] .pearl__l{background:#fffaf2}
+html[data-skin="i"] .clasp{background:#e8553d; color:#fff; border-color:#e8553d; border-radius:50%}
+html[data-skin="i"] .doors{grid-template-columns:1fr; gap:40px}
+html[data-skin="i"] .door{border-top:0; padding-top:0}
+html[data-skin="i"] .door__h h2{font-size:clamp(22px,2.6vw,34px); font-weight:800}
+html[data-skin="i"] .door__c{grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}
+html[data-skin="i"] .door--late .door__c{grid-template-columns:repeat(2,minmax(0,1fr))}
+html[data-skin="i"] .pc{border-radius:30px; box-shadow:none; padding:26px; position:relative; overflow:hidden; min-height:340px}
+html[data-skin="i"] .pc:nth-child(1){background:#fde3cf}
+html[data-skin="i"] .pc:nth-child(2){background:#dcecd3}
+html[data-skin="i"] .pc:nth-child(3){background:#d8e6f7}
+html[data-skin="i"] .pc:nth-child(4){background:#f0dcef}
+html[data-skin="i"] .door--late .pc:nth-child(1){background:#f8d5cf}
+html[data-skin="i"] .door--late .pc:nth-child(2){background:#eddfc6}
+html[data-skin="i"] .pc:hover{transform:rotate(-1.2deg) translateY(-4px); box-shadow:0 20px 30px -20px rgba(0,0,0,.3)}
+html[data-skin="i"] .pc__c{background:#fff; border:0; width:60px; height:60px; font-size:30px}
+html[data-skin="i"] .pc--late .pc__c{color:#e8553d}
+html[data-skin="i"] .pc__aud{border:0; background:rgba(255,255,255,.7)}
+html[data-skin="i"] .pc h3{font-size:24px}
+html[data-skin="i"] .pc__f{border-top:0; padding-top:12px}
+html[data-skin="i"] .pc__go,html[data-skin="i"] .pc--late .pc__go{background:#1f1d1a; color:#fff}
+html[data-skin="i"] .phil{background:#1f1d1a; border-radius:36px}
+html[data-skin="i"] .phil h3{color:#ffd9a8}
+@media(max-width:1000px){ html[data-skin="i"] .door__c{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media(max-width:560px){ html[data-skin="i"] .door__c,html[data-skin="i"] .door--late .door__c{grid-template-columns:1fr} }
+
+.langs button{white-space:nowrap}
+.langs{flex:none}
+@media(max-width:520px){.top{gap:8px;padding-inline:14px}.mark small{display:none}.book{padding:9px 12px;font-size:12px;letter-spacing:.12em}.langs button{padding:5px 8px}}
+/* ===== v3: built from designer ticket BC-WEB-01 (style I) ===== */
+html[lang="zh-Hans"]{--mincho:"Noto Serif SC","Songti SC","Source Han Serif SC",serif; --ut:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; --la:"Cormorant Garamond","Noto Serif SC",serif}
+html[lang="zh-Hant"]{--mincho:"Noto Serif TC","Songti TC","Source Han Serif TC",serif; --ut:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; --la:"Cormorant Garamond","Noto Serif TC",serif}
+.sr-only{position:absolute!important; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+main>section{margin-top:clamp(72px,10vw,128px)}
+main>section.hero{margin-top:0}
+.top{height:72px; padding-block:0; border-bottom:1px solid transparent; transition:border-color .3s}
+.top.is-scrolled{border-bottom-color:var(--ink-16)}
+.nav{display:flex; align-items:center; gap:clamp(14px,2vw,26px); font-family:var(--ut); font-size:14px; letter-spacing:.1em}
+.nav a{padding:8px 2px}
+.nav a:hover{color:var(--shu)}
+.nav .nav__c{background:var(--shu); color:#fff; padding:9px 18px; border-radius:99px}
+.nav .nav__c:hover{color:#fff; opacity:.9}
+.menu{display:none; width:44px; height:44px; border-radius:12px; flex-direction:column; align-items:center; justify-content:center; gap:5px}
+.menu span{display:block; width:20px; height:2px; background:var(--sumi)}
+@media(max-width:820px){
+  .top{height:56px}
+  .nav{display:none}
+  .nav.open{display:flex; position:fixed; top:56px; left:0; right:0; flex-direction:column; align-items:stretch; gap:0; padding:8px var(--gut) 20px; background:#fffaf2; border-bottom:1px solid var(--ink-16); z-index:29}
+  .nav.open a{padding:14px 4px; font-size:16px; min-height:44px; border-bottom:1px solid var(--ink-08)}
+  .nav.open .nav__c{margin-top:12px; text-align:center; border:0}
+  .menu{display:flex}
+  .mark{margin-right:auto}
+}
+.hero{min-height:min(calc(100vh - 72px),820px)}
+html[lang="zh-Hans"] .hero h1{writing-mode:vertical-rl; text-orientation:upright; font-feature-settings:normal; letter-spacing:.24em; line-height:1.25; grid-row:2}
+html[lang="zh-Hans"] .hero h1 .nb{display:block}
+html[lang="zh-Hans"] .hero h1{font-size:clamp(26px,3vw,40px)}
+html[lang="ja"] .hero h1{font-size:clamp(26px,3vw,40px)}
+.hero__lede{align-self:end}
+.hero__lede p{margin:0 0 8px}
+.hero__s1{font-size:16px; font-weight:700; letter-spacing:.14em}
+.hero__s2{font-size:14.5px; color:var(--ink-60); letter-spacing:.06em}
+.cue{grid-column:1 / -1; margin-top:28px; font-family:var(--ut); font-size:13px; letter-spacing:.14em; color:var(--ink-60)}
+.cue:hover{color:var(--shu)}
+html[lang="en"] .hero__s1{font-size:17px}
+.ring--deco{width:min(100%,520px); pointer-events:none}
+.ring--deco .pearl{width:60px}
+.ring--deco .pearl__c{width:56px; height:56px; font-size:26px; margin:0 auto}
+.ring--deco .clasp{width:28px; height:28px; font-size:14px; top:9%}
+.pearl__c.pc__cc{display:inline}
+.core{width:48%}
+.core__k{margin:0; font-size:clamp(17px,1.9vw,24px); font-weight:800; line-height:1.7; letter-spacing:.1em}
+.core__s{margin:10px 0 0; font-size:13px; line-height:1.9; color:var(--ink-60)}
+.core__h{margin:14px 0 0; font-family:var(--ut); font-size:11.5px; letter-spacing:.16em; color:var(--ink-38)}
+.clasp__l{position:absolute; left:50%; top:15%; transform:translateX(-50%); margin:0; font-family:var(--ut); font-size:10.5px; letter-spacing:.2em; color:var(--ink-38); white-space:nowrap}
+.ring--deco .clasp__l{display:none}
+.core__def{display:none}
+.thread-sec{text-align:center}
+.thread-sec .ring{margin-top:18px; width:min(100%,640px)}
+.thread-sec .thread{justify-content:center; margin-top:26px}
+.philo{max-width:640px; margin-inline:auto; text-align:left}
+.philo h2{margin:12px 0 22px; font-size:clamp(24px,3vw,36px); font-weight:800; line-height:1.5; letter-spacing:.06em}
+.philo p:not(.eyebrow){margin:0 0 16px; font-size:17px; line-height:2}
+html[lang="en"] .philo p:not(.eyebrow){line-height:1.7}
+.acts__g{margin-top:18px; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}
+.act{position:relative; min-height:220px; padding:26px 22px 22px; border-radius:24px; display:flex; flex-direction:column; gap:10px}
+.act:nth-child(1){background:#fde3cf}.act:nth-child(2){background:#dcecd3}.act:nth-child(3){background:#d8e6f7}
+.act--late{background:#e8553d!important; color:#fff}
+.act h3{margin:0; font-size:clamp(24px,2.2vw,30px); font-weight:800; line-height:1.4}
+.act p{margin:0; font-size:15px; line-height:1.9}
+.act__p{margin-top:auto; font-size:13px; color:var(--ink-60)}
+.act--late .act__p{color:rgba(255,255,255,.85)}
+.products__head{margin-bottom:6px}
+.pc{position:relative}
+.pc__go::after{content:""; position:absolute; inset:0; border-radius:inherit}
+.pc{cursor:pointer}
+.pc .gloss{display:inline; font-size:14px; font-weight:400; letter-spacing:.04em; color:var(--ink-60); font-family:var(--ut); text-transform:none}
+.pc__cc{font-size:inherit}
+.pc__bk{display:flex; flex-direction:column; gap:3px; margin:0; font-size:12.5px; line-height:1.7; color:var(--ink-60)}
+.pc__bk b{font-weight:600; font-family:var(--ut); font-size:11.5px; letter-spacing:.14em; order:-2}
+.bk{position:relative; z-index:2; color:var(--ink-60); text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(0,0,0,.25)}
+.bk:hover{color:var(--shu)}
+html[lang="en"] .bk--en{order:-1}
+.pc__f{justify-content:flex-start}
+.pc__go{position:static}
+.japan__g{margin-top:26px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(16px,3vw,40px)}
+.japan h2{margin:12px 0 0; font-size:clamp(24px,3vw,38px); font-weight:800; line-height:1.5; letter-spacing:.05em}
+.japan__g>div{border-top:2px solid var(--sumi); padding-top:14px}
+.japan__g h3{margin:0 0 6px; font-size:24px; font-weight:800}
+.japan__g p{margin:0; font-size:15px; line-height:1.9; color:var(--ink-60)}
+.closing{background:#1f1d1a; color:#fff; margin-inline:calc(50% - 50vw); padding:clamp(56px,10vw,120px) var(--gut); text-align:center; margin-bottom:0}
+.closing__l{margin:0; font-size:clamp(24px,4vw,48px); font-weight:800; line-height:1.5; letter-spacing:.1em}
+.foot{margin-top:0}
+.foot__links{width:var(--col); margin:48px auto 0}
+.foot__links p{margin:8px 0; font-size:14px}
+.foot__links a{text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(0,0,0,.25)}
+.foot__links a:hover{color:var(--shu)}
+.pay--foot{width:var(--col); margin:28px auto 0}
+.contact .form,.contact{border-radius:28px}
+@media(max-width:1000px){ .acts__g{grid-template-columns:repeat(2,minmax(0,1fr))} .japan__g{grid-template-columns:1fr} }
+@media(max-width:820px){
+  .hero{min-height:0}
+  .ring.ring--deco{display:block; aspect-ratio:1; width:min(88%,330px); padding:0; border:0; margin:28px auto 0}
+  .ring--deco .ring__thread{display:block}
+  .ring--deco .clasp{display:block; width:24px; height:24px; font-size:12px}
+  .ring--deco .pearl{position:absolute; left:var(--x); top:var(--y); transform:translate(-50%,-50%); width:44px; display:block; padding:0; opacity:1; animation:none}
+  .ring--deco .pearl__c{width:42px; height:42px; font-size:20px; margin:0}
+  .acts__g{grid-template-columns:1fr}
+  .act{min-height:0}
+  .thread-sec .ring{width:100%; text-align:left}
+  .thread-sec{text-align:left}
+  .thread-sec .thread{justify-content:flex-start}
+  .tip__a{display:inline-block; margin-top:6px; color:var(--shu); font-size:13px}
+  .pearl{cursor:default}
+  .closing{padding-block:72px}
+}
+@media(max-width:820px){ .clasp__l{display:none} .thread-sec .clasp{position:static; transform:none; margin:0 0 6px -42px} }
+@media(max-width:520px){ .top{gap:8px} .langs button{padding:5px 7px} .mark small{display:none} }
+/* dark mode: follows the system setting */
+@media(prefers-color-scheme:dark){
+  html[data-skin="i"]{--sumi:#f1ebe0; --sumi-soft:#d9d2c5; --kami:#262320; --washi:#171513; --shu:#f0765f; --ink-60:#bdb6a9; --ink-38:#938c80; --ink-16:#3a3631; --ink-08:#2c2925; color-scheme:dark}
+  html[data-skin="i"] body{background:#171513; color:#f1ebe0}
+  html[data-skin="i"] .top{background:rgba(23,21,19,.92)}
+  html[data-skin="i"] .nav.open{background:#171513}
+  html[data-skin="i"] .panel{background:#201d1a; box-shadow:0 0 0 1px #3a3631}
+  html[data-skin="i"] .langs{background:#26231f; box-shadow:none}
+  html[data-skin="i"] .langs button[aria-pressed="true"]{background:#f1ebe0; color:#171513; box-shadow:none}
+  html[data-skin="i"] .nav .nav__c,html[data-skin="i"] .send{color:#171513}
+  html[data-skin="i"] .ring__thread circle{stroke:#f1ebe0}
+  html[data-skin="i"] .pearl__c{background:#26231f; color:#f1ebe0; box-shadow:0 6px 16px -4px rgba(0,0,0,.6)}
+  html[data-skin="i"] .pearl--late .pearl__c{background:#f0765f; color:#171513}
+  html[data-skin="i"] .pearl__l{background:#171513}
+  html[data-skin="i"] .clasp{background:#f0765f; color:#171513; border-color:#f0765f}
+  html[data-skin="i"] .act:nth-child(1){background:#4a3526}
+  html[data-skin="i"] .act:nth-child(2){background:#2f4129}
+  html[data-skin="i"] .act:nth-child(3){background:#26364d}
+  html[data-skin="i"] .act--late{background:#f0765f!important; color:#171513}
+  html[data-skin="i"] .act--late .act__p{color:rgba(23,21,19,.8)}
+  html[data-skin="i"] .pc:nth-child(1){background:#4a3526}
+  html[data-skin="i"] .pc:nth-child(2){background:#2f4129}
+  html[data-skin="i"] .pc:nth-child(3){background:#26364d}
+  html[data-skin="i"] .pc:nth-child(4){background:#43304a}
+  html[data-skin="i"] .door--late .pc:nth-child(1){background:#5a312c}
+  html[data-skin="i"] .door--late .pc:nth-child(2){background:#4a4030}
+  html[data-skin="i"] .pc__c{background:#171513; color:#f1ebe0}
+  html[data-skin="i"] .pc--late .pc__c{color:#f0765f}
+  html[data-skin="i"] .pc__aud{background:rgba(0,0,0,.28); color:#d9d2c5}
+  html[data-skin="i"] .pc__go,html[data-skin="i"] .pc--late .pc__go{background:#f1ebe0; color:#171513}
+  html[data-skin="i"] .bk{text-decoration-color:rgba(255,255,255,.3)}
+  html[data-skin="i"] .closing{background:#0e0d0c}
+  html[data-skin="i"] input,html[data-skin="i"] textarea{background:#171513; color:#f1ebe0; border-color:#3a3631}
+  html[data-skin="i"] .form{background:#201d1a}
+  html[data-skin="i"] .japan__g>div{border-top-color:#f1ebe0}
+  html[data-skin="i"] .foot__links a{text-decoration-color:rgba(255,255,255,.3)}
+}
+@media(prefers-reduced-motion:reduce){ .pc,.pearl__c{transition:none} }
+
+
+.socials{display:flex; align-items:center; gap:6px}
+.socials--hero{display:none; margin-top:18px; gap:10px}
+.socials--hero .soc{width:40px; height:40px}
+.socials--hero .soc svg{width:18px; height:18px}
+.soc{display:grid; place-items:center; width:34px; height:34px; border-radius:99px; background:rgba(0,0,0,.07); color:var(--sumi); transition:background .3s,color .3s}
+.soc svg{width:16px; height:16px; fill:currentColor}
+.soc:hover{background:var(--sumi); color:var(--kami)}
+.profile .socrow{display:flex; gap:8px; align-items:center}
+.profile .socrow a{border-bottom:0}
+@media(max-width:820px){ .top .socials{display:none} .socials--hero{display:flex} }
 </style>
 </head>
 <body>
@@ -285,256 +573,235 @@ html[lang="en"] .hero__lede{margin-top:20px}
     <strong lang="ja">獨歩文化</strong>
     <small>Beyond Culture</small>
   </a>
+  <nav class="nav" id="nav" aria-label="Main">
+    <a href="#philosophy" data-en="Philosophy" data-zs="理念" data-zh="理念">理念</a>
+    <a href="#products" data-en="Products" data-zs="产品" data-zh="產品">商品</a>
+    <a href="#company" data-en="Company" data-zs="公司概况" data-zh="公司概況">会社概要</a>
+    <a class="nav__c" href="#contact" data-en="Contact" data-zs="联系我们" data-zh="聯絡我們">お問い合わせ</a>
+  </nav>
   <nav class="socials" aria-label="SNS"><a class="soc" href="https://www.youtube.com/@Domo-ai" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a class="soc" href="https://www.tiktok.com/@domoai2026" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a class="soc" href="https://x.com/lens_brianfu" target="_blank" rel="noopener" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></nav>
   <div class="langs" role="group" aria-label="Language">
     <button data-lang="ja" aria-pressed="true">日本語</button>
     <button data-lang="en" aria-pressed="false">EN</button>
-    <button data-lang="zh" aria-pressed="false">繁中</button>
+    <button data-lang="zh" aria-pressed="false">繁</button>
+    <button data-lang="zs" aria-pressed="false">简</button>
   </div>
-  <a class="book" href="#contact" data-en="Contact" data-zh="聯絡我們">お問い合わせ</a>
+  <button class="menu" id="menu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
 <main>
-  <section class="hero">
-    <div class="hero__text" id="top">
-      <p class="eyebrow">Beyond Culture 獨歩文化株式会社</p>
-      <h1 data-en="We build with culture in mind." data-zh="&lt;span class=&quot;nb&quot;&gt;以技術，&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;承續文化。&lt;/span&gt;"><span class="nb">文化を、</span><span class="nb">技術で継ぐ。</span></h1>
-      <p class="hero__lede" data-en="Beyond Culture builds AI-driven products around Japanese cultural practice — recording a life, and helping children learn the written language and think for themselves. Six services are in operation, each with its own site."
-         data-zh="獨步文化以 AI 技術，打造貼近日本文化實踐的產品——留存一個人的一生，以及幫助孩子學習文字、培養獨立思考的能力。目前營運六項服務，各有獨立網站。">
-        日本の文化的な営みを、AIの技術で支えるプロダクトをつくっています。
-        一人の生涯を記録すること、子どもが文字を身につけ、自分で考える力を育てること。
-        現在、六つのサービスをそれぞれのサイトで運営しています。
-      </p>
+  <section class="hero" id="top">
+    <div class="hero__text">
+      <p class="eyebrow">BEYOND CULTURE · 獨歩文化株式会社</p>
+      <h1 data-en="In the age of AI, train what makes us human." data-zs="&lt;span class=&quot;nb&quot;&gt;在AI时代，&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;锻炼人之为人。&lt;/span&gt;" data-zh="&lt;span class=&quot;nb&quot;&gt;在AI時代，&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;鍛鍊人之為人。&lt;/span&gt;"><span class="nb"><span class="tcy">AI</span>の時代に、</span><span class="nb">人間であることを鍛える。</span></h1>
+      <div class="hero__lede">
+        <p class="hero__s1" data-en="Think. Question. Reason. Feel." data-zs="思考。提问。推理。感受。" data-zh="思考。提問。推理。感受。">考える。問う。筋道を立てる。感じる。</p>
+        <p class="hero__s2" data-en="Made in Japan, for every human being." data-zs="生于日本，献给世界上的每一个人。" data-zh="生於日本，獻給世界上的每一個人。">日本でつくり、世界の人へ。</p>
+      </div>
+      <a class="cue" href="#thread"><span data-en="↓ Follow the thread" data-zs="↓ 沿着这条线" data-zh="↓ 沿著這條線">↓ ひとつの糸をたどる</span></a>
       <nav class="socials socials--hero" aria-label="SNS"><a class="soc" href="https://www.youtube.com/@Domo-ai" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a class="soc" href="https://www.tiktok.com/@domoai2026" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a class="soc" href="https://x.com/lens_brianfu" target="_blank" rel="noopener" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></nav>
     </div>
-    <div class="stage" data-depth aria-hidden="true" lang="ja">
-      <span class="chain" style="--x:6%;--h:62%;--g:14px;--o:.28;--t:8s"></span>
-      <span class="chain" style="--x:15%;--h:78%;--g:11px;--r:2px;--o:.34;--t:6s;--dl:-2s"></span>
-      <span class="chain" style="--x:27%;--h:54%;--g:16px;--o:.22;--t:9s;--dl:-1s"></span>
-      <span class="chain" style="--x:41%;--h:70%;--g:12px;--r:1.3px;--o:.3;--t:7s;--dl:-4s"></span>
-      <span class="chain" style="--x:56%;--h:84%;--g:13px;--r:2.2px;--o:.36;--t:8.5s;--dl:-3s"></span>
-      <span class="chain" style="--x:68%;--h:60%;--g:15px;--o:.24;--t:6.5s"></span>
-      <span class="chain" style="--x:79%;--h:74%;--g:12px;--r:1.8px;--o:.32;--t:7.5s;--dl:-5s"></span>
-      <span class="dew">記憶は水</span>
+    <div class="ring ring--deco" aria-hidden="true">
+      <svg class="ring__thread" viewBox="0 0 100 100"><circle cx="50" cy="50" r="41" pathLength="1"/></svg>
+      <div class="clasp"><span lang="ja">留</span></div>
+      <div class="pearl" style="--x:85.51%;--y:29.50%;--i:0"><span class="pearl__c" data-en="字" data-zs="字" data-zh="字">字</span></div>
+      <div class="pearl" style="--x:91.00%;--y:50.00%;--i:1"><span class="pearl__c" data-en="問" data-zs="问" data-zh="問">問</span></div>
+      <div class="pearl" style="--x:70.50%;--y:85.51%;--i:2"><span class="pearl__c" data-en="視" data-zs="视" data-zh="視">視</span></div>
+      <div class="pearl" style="--x:29.50%;--y:85.51%;--i:3"><span class="pearl__c" data-en="確" data-zs="确" data-zh="確">確</span></div>
+      <div class="pearl pearl--late" style="--x:9.00%;--y:50.00%;--i:4"><span class="pearl__c" data-en="語" data-zs="语" data-zh="語">語</span></div>
+      <div class="pearl pearl--late" style="--x:14.49%;--y:29.50%;--i:5"><span class="pearl__c" data-en="一" data-zs="一" data-zh="一">一</span></div>
+    </div>
+  </section>
 
-      <div class="bw bw--far" style="--x:6%;--y:4%;--z:-260;--r:-3deg;--d:.25;--xs:2%;--ys:2%"><span class="bub" style="--t:8s">記憶</span></div>
-      <div class="bw bw--far" style="--x:52%;--y:2%;--z:-240;--r:4deg;--d:.25;--xs:62%;--ys:2%"><span class="bub bub--tr" lang="zh-Hant" style="--t:9s;--dl:-2s">傳承</span></div>
-      <div class="bw bw--far bw--sm-hide" style="--x:70%;--y:50%;--z:-280;--r:-2deg;--d:.2"><span class="bub bub--la bub--tr" style="--t:7.5s;--dl:-4s">Soul ID</span></div>
-      <div class="bw bw--far bw--sm-hide" style="--x:2%;--y:56%;--z:-250;--r:3deg;--d:.25"><span class="bub" style="--t:8.5s;--dl:-1s">一字ずつ</span></div>
+  <section class="philo" id="philosophy">
+    <p class="eyebrow" data-en="PHILOSOPHY" data-zs="理念" data-zh="理念">理念</p>
+    <h2 data-en="AI can give answers. It cannot think for you." data-zs="AI能给出答案，却无法替你思考。" data-zh="AI能給出答案，卻無法替你思考。">AIは答えを出せる。でも、あなたの代わりに考えることはできない。</h2>
+    <p data-en="AI can now write, calculate, and even offer kind words. That makes an old question urgent: what is a human being?" data-zs="AI已经能写作、计算，甚至说出温柔的话语。正因如此，“人是什么”成了当下的问题。" data-zh="AI已經能寫作、計算，甚至說出溫柔的話語。正因如此，「人是什麼」成了當下的問題。">AIは、文章も、計算も、やさしい言葉さえ生み出せるようになりました。だからこそ、いま問われています。人間とは何か。</p>
+    <p data-en="Our answer is a being who thinks, questions, reasons and feels for themselves. Hand these four over, and they stop being yours." data-zs="我们的回答是：人，是自己思考、提问、推理、感受的存在。这四种力量一旦交给AI，便不再属于你。" data-zh="我們的回答是：人，是自己思考、提問、推理、感受的存在。這四種力量一旦交給AI，便不再屬於你。">私たちの答えは、自分で考え、問い、筋道を立て、感じる存在です。この四つは、AIに任せた瞬間に、自分の一部ではなくなります。</p>
+    <p data-en="Beyond Culture makes tools in Japan to train them." data-zs="Beyond Culture 在日本打造锻炼这四种力量的工具。" data-zh="Beyond Culture 在日本打造鍛鍊這四種力量的工具。">Beyond Cultureは、この四つの力を鍛える道具を、日本でつくっています。</p>
+  </section>
 
-      <div class="bw bw--mid" style="--x:26%;--y:10%;--z:-60;--r:-3deg;--d:.6;--xs:22%;--ys:12%"><span class="bub bub--sumi" style="--fs:17px;--t:7s">魂の銘</span></div>
-      <div class="bw bw--mid" style="--x:50%;--y:20%;--z:-40;--r:3deg;--d:.6;--xs:46%;--ys:24%"><span class="bub bub--tr" style="--fs:16px;--t:6.5s;--dl:-2.5s">漢字でんしゃ</span></div>
-      <div class="bw bw--mid" style="--x:4%;--y:30%;--z:-90;--r:-2deg;--d:.55;--xs:2%;--ys:34%"><span class="bub bub--koke" style="--fs:15px;--t:8s;--dl:-1.5s">ナゼホリ</span></div>
-      <div class="bw bw--mid bw--sm-hide" style="--x:78%;--y:28%;--z:-70;--r:5deg;--d:.6"><span class="bub bub--shu bub--tr" style="--t:7s;--dl:-3.5s">なぜ？</span></div>
+  <section class="acts" id="acts">
+    <p class="eyebrow" data-en="FOUR ACTS" data-zs="四种力量" data-zh="四種力量">四つの力</p>
+    <div class="acts__g">
+      <article class="act"><h3 data-en="Think" data-zs="思考" data-zh="思考">考える</h3><p data-en="Those who hold words can think deeply." data-zs="拥有语言的人，才能深入思考。" data-zh="擁有語言的人，才能深入思考。">言葉を持つ人は、深く考えられる。</p><span class="act__p" aria-hidden="true">①</span></article>
+      <article class="act"><h3 data-en="Question" data-zs="提问" data-zh="提問">問う</h3><p data-en="After the answer, one more question." data-zs="在答案之后，再问一句。" data-zh="在答案之後，再問一句。">答えのあとに、もう一問。</p><span class="act__p" aria-hidden="true">②</span></article>
+      <article class="act"><h3 data-en="Reason" data-zs="推理" data-zh="推理">筋道を立てる</h3><p data-en="See the structure. Check it yourself." data-zs="看清结构，亲自验证。" data-zh="看清結構，親自驗證。">構造を見抜き、自分で確かめる。</p><span class="act__p" aria-hidden="true">③④</span></article>
+      <article class="act act--late"><h3 data-en="Feel" data-zs="感受" data-zh="感受">感じる</h3><p data-en="Put the meaning of a life into words and one character." data-zs="把人生的意义，化为语言与一字。" data-zh="把人生的意義，化為語言與一字。">生きた意味を、言葉と一字に。</p><span class="act__p" aria-hidden="true">⑤⑥</span></article>
+    </div>
+  </section>
 
-      <div class="bw" style="--x:8%;--y:42%;--z:70;--r:-2deg;--d:1.1;--xs:3%;--ys:44%"><span class="bub" style="--fs:19px;--t:6s;--dl:-1s">記憶を、次の世代へ</span></div>
-      <div class="bw" style="--x:46%;--y:44%;--z:90;--r:3deg;--d:1.2;--xs:40%;--ys:52%"><span class="bub bub--ember bub--la bub--tr" style="--fs:20px;--t:6.8s;--dl:-3s">Beyond Culture</span></div>
-      <div class="bw" style="--x:26%;--y:58%;--z:40;--r:-3deg;--d:1;--xs:4%;--ys:62%"><span class="bub" style="--fs:16px;--t:7.2s;--dl:-2s">もう一段、深く。</span></div>
-      <div class="bw bw--sm-hide" style="--x:60%;--y:60%;--z:50;--r:2deg;--d:1"><span class="bub bub--deep bub--la bub--tr" style="--fs:15px;--t:7.6s;--dl:-1.2s">Thank you!</span></div>
-      <div class="bw bw--sm-hide" style="--x:74%;--y:14%;--z:30;--r:-6deg;--d:.9"><span class="bub bub--tr" lang="zh-Hant" style="--t:6.4s;--dl:-4s">提問</span></div>
-
-      <div class="bowl">
-        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-          <path d="M8 16 Q250 44 492 16" fill="none" stroke="#14161A" stroke-width="6" stroke-linecap="round" opacity=".9"/>
-          <path d="M18 24 C40 110 130 146 250 146 C370 146 460 110 482 24" fill="none" stroke="#14161A" stroke-width="15" stroke-linecap="round"/>
-          <path d="M26 34 C50 110 136 138 250 138 C364 138 450 110 474 34 Z" fill="#14161A" opacity=".06"/>
-        </svg>
+  <section class="thread-sec" id="thread">
+    <p class="eyebrow" data-en="THE THREAD" data-zs="一条线" data-zh="一條線">ひとつの糸</p>
+    <div class="ring" id="ring">
+      <svg class="ring__thread" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="41" pathLength="1"/></svg>
+      <div class="clasp" lang="ja"><span>留</span></div>
+      <p class="clasp__l" data-en="BEGINNING · RETURN" data-zs="起点 · 回归" data-zh="起點 · 回歸">はじまり · かえり</p>
+      <div class="core" aria-live="polite">
+        <div class="core__body">
+          <p class="core__k" data-en="Begin with one character. Return to one character." data-zs="始于一字，归于一字。" data-zh="始於一字，歸於一字。">一字に始まり、一字に還る。</p>
+          <p class="core__s" data-en="From a child’s first kanji to the one kanji given at sixty. Six tools on one thread." data-zs="从孩子学会的第一个字，到花甲之年收到的一个字。六件工具，一线贯穿。" data-zh="從孩子學會的第一個字，到花甲之年收到的一個字。六件工具，一線貫穿。">子どもが覚える最初の一字から、還暦に贈る一字まで。六つの道具を、ひとつの糸で。</p>
+          <p class="core__h" data-en="Tap a pearl to learn more" data-zs="点击珍珠查看详情" data-zh="點擊珍珠查看詳情">真珠にふれると、説明が表示されます</p>
+        </div>
+        <div class="core__def" hidden>
+          <p class="core__k" data-en="Begin with one character. Return to one character." data-zs="始于一字，归于一字。" data-zh="始於一字，歸於一字。">一字に始まり、一字に還る。</p>
+          <p class="core__s" data-en="From a child’s first kanji to the one kanji given at sixty. Six tools on one thread." data-zs="从孩子学会的第一个字，到花甲之年收到的一个字。六件工具，一线贯穿。" data-zh="從孩子學會的第一個字，到花甲之年收到的一個字。六件工具，一線貫穿。">子どもが覚える最初の一字から、還暦に贈る一字まで。六つの道具を、ひとつの糸で。</p>
+          <p class="core__h" data-en="Tap a pearl to learn more" data-zs="点击珍珠查看详情" data-zh="點擊珍珠查看詳情">真珠にふれると、説明が表示されます</p>
+        </div>
       </div>
-      <div class="inside"><span>名</span><span>声</span><span>縁</span><span>恩</span></div>
+      <div class="pearl" style="--x:85.51%;--y:29.50%;--i:0" tabindex="0" role="button" aria-label="漢字でんしゃ">
+        <span class="pearl__n" aria-hidden="true">①</span><span class="pearl__c" data-en="字" data-zs="字" data-zh="字">字</span>
+        <span class="pearl__l"><span lang="ja">漢字でんしゃ</span><small><span data-en="Know" data-zs="认知" data-zh="認知">知る</span></small></span>
+        <span class="tip"><b class="tip__n" lang="ja">漢字でんしゃ</b><span class="tip__v"><span data-en="Know" data-zs="认知" data-zh="認知">知る</span></span><span class="tip__p" data-en="Hold the words you think with, one character at a time. All 1,026 elementary kanji." data-zs="把思考所需的词语，一字一字装进自己心里。共1026字。" data-zh="把思考所需的詞語，一字一字裝進自己心裡。共1026字。">考えるための言葉を、一字ずつ自分の中に。小学校で習う1026字。</span><a class="tip__a" href="https://kanji-ai.jp/" target="_blank" rel="noopener"><span data-en="Try free for 10 days" data-zs="免费试用10天" data-zh="免費試用10天">10日間無料で試す</span> ↗</a></span>
+      </div>
+      <div class="pearl" style="--x:91.00%;--y:50.00%;--i:1" tabindex="0" role="button" aria-label="ナゼホリ">
+        <span class="pearl__n" aria-hidden="true">②</span><span class="pearl__c" data-en="問" data-zs="问" data-zh="問">問</span>
+        <span class="pearl__l"><span lang="ja">ナゼホリ</span><small><span data-en="Ask" data-zs="提问" data-zh="提問">問う</span></small></span>
+        <span class="tip"><b class="tip__n" lang="ja">ナゼホリ</b><span class="tip__v"><span data-en="Ask" data-zs="提问" data-zh="提問">問う</span></span><span class="tip__p" data-en="After the AI’s answer, one more question. Stand on the side that asks." data-zs="在AI的答案之后，再多问一个问题。站在提问的一方。" data-zh="在AI的答案之後，再多問一個問題。站在提問的一方。">AIの答えのあとに、もう一問。問いを立てる側に立つ。</span><a class="tip__a" href="https://domo-ai.com/nazehori/" target="_blank" rel="noopener"><span data-en="Try lesson 1 free" data-zs="免费体验第1课" data-zh="免費體驗第1課">レッスン1を無料で</span> ↗</a></span>
+      </div>
+      <div class="pearl" style="--x:70.50%;--y:85.51%;--i:2" tabindex="0" role="button" aria-label="視点レンズ">
+        <span class="pearl__n" aria-hidden="true">③</span><span class="pearl__c" data-en="視" data-zs="视" data-zh="視">視</span>
+        <span class="pearl__l"><span lang="ja">視点レンズ</span><small><span data-en="See" data-zs="洞察" data-zh="洞察">見る</span></small></span>
+        <span class="tip"><b class="tip__n" lang="ja">視点レンズ</b><span class="tip__v"><span data-en="See" data-zs="洞察" data-zh="洞察">見る</span></span><span class="tip__p" data-en="Eight lenses to see the structure of a problem." data-zs="用8种透镜，看清问题的结构。" data-zh="用8種透鏡，看清問題的結構。">8つのレンズで、問題の構造を見抜く。</span><a class="tip__a" href="https://lens.domo-ai.com/" target="_blank" rel="noopener"><span data-en="Try free for 3 days" data-zs="免费试用3天" data-zh="免費試用3天">3日間無料で試す</span> ↗</a></span>
+      </div>
+      <div class="pearl" style="--x:29.50%;--y:85.51%;--i:3" tabindex="0" role="button" aria-label="つまずきマップ">
+        <span class="pearl__n" aria-hidden="true">④</span><span class="pearl__c" data-en="確" data-zs="确" data-zh="確">確</span>
+        <span class="pearl__l"><span lang="ja">つまずきマップ</span><small><span data-en="Verify" data-zs="验证" data-zh="驗證">確かめる</span></small></span>
+        <span class="tip"><b class="tip__n" lang="ja">つまずきマップ</b><span class="tip__v"><span data-en="Verify" data-zs="验证" data-zh="驗證">確かめる</span></span><span class="tip__p" data-en="Snap your work and check your own stumbling points yourself." data-zs="拍一拍，亲自确认自己的卡点。" data-zh="拍一拍，親自確認自己的卡點。">撮るだけで、自分のつまずきを自分で確かめる。</span><a class="tip__a" href="https://tsumazuki.domo-ai.com/" target="_blank" rel="noopener"><span data-en="Try 30 photos free" data-zs="免费试用30张" data-zh="免費試用30張">30枚まで無料で試す</span> ↗</a></span>
+      </div>
+      <div class="pearl pearl--late" style="--x:9.00%;--y:50.00%;--i:4" tabindex="0" role="button" aria-label="魂の銘">
+        <span class="pearl__n" aria-hidden="true">⑤</span><span class="pearl__c" data-en="語" data-zs="语" data-zh="語">語</span>
+        <span class="pearl__l"><span lang="ja">魂の銘</span><small><span data-en="Tell" data-zs="讲述" data-zh="講述">語る</span></small></span>
+        <span class="tip"><b class="tip__n" lang="ja">魂の銘</b><span class="tip__v"><span data-en="Tell" data-zs="讲述" data-zh="講述">語る</span></span><span class="tip__p" data-en="Tell what you have lived, in your own words, and leave it behind." data-zs="用自己的话讲述走过的人生，并把它留存下来。" data-zh="用自己的話講述走過的人生，並把它留存下來。">生きてきたことを、自分の言葉で語り、残す。</span><a class="tip__a" href="https://soul-id.jp/" target="_blank" rel="noopener"><span data-en="Learn more" data-zs="了解详情" data-zh="了解詳情">詳しく見る</span> ↗</a></span>
+      </div>
+      <div class="pearl pearl--late" style="--x:14.49%;--y:29.50%;--i:5" tabindex="0" role="button" aria-label="ICHIREI 一字礼">
+        <span class="pearl__n" aria-hidden="true">⑥</span><span class="pearl__c" data-en="一" data-zs="一" data-zh="一">一</span>
+        <span class="pearl__l"><span lang="ja">ICHIREI 一字礼</span><small><span data-en="Engrave" data-zs="铭刻" data-zh="銘刻">刻む</span></small></span>
+        <span class="tip"><b class="tip__n" lang="ja">ICHIREI 一字礼</b><span class="tip__v"><span data-en="Engrave" data-zs="铭刻" data-zh="銘刻">刻む</span></span><span class="tip__p" data-en="Sixty years in one character, carved in wood and given as a gift." data-zs="将六十年凝于一字，刻于木上，作为礼物相赠。" data-zh="將六十年凝於一字，刻於木上，作為禮物相贈。">六十年を一字に込めて、木に刻み、贈る。</span><a class="tip__a" href="https://ichirei.soul-id.jp/" target="_blank" rel="noopener"><span data-en="Learn more" data-zs="了解详情" data-zh="了解詳情">詳しく見る</span> ↗</a></span>
+      </div>
     </div>
-    <div class="hero__seal" aria-hidden="true"><span lang="ja">獨</span></div>
+    <p class="thread" lang="ja"><span class="" data-en="Know" data-zs="认知" data-zh="認知">知る</span><i>→</i><span class="" data-en="Ask" data-zs="提问" data-zh="提問">問う</span><i>→</i><span class="" data-en="See" data-zs="洞察" data-zh="洞察">見る</span><i>→</i><span class="" data-en="Verify" data-zs="验证" data-zh="驗證">確かめる</span><i>→</i><span class="late" data-en="Tell" data-zs="讲述" data-zh="講述">語る</span><i>→</i><span class="late" data-en="Engrave" data-zs="铭刻" data-zh="銘刻">刻む</span></p>
+    <ul class="sr-only">
+      <li>漢字でんしゃ — <a href="https://kanji-ai.jp/">https://kanji-ai.jp/</a></li>
+      <li>ナゼホリ — <a href="https://domo-ai.com/nazehori/">https://domo-ai.com/nazehori/</a></li>
+      <li>視点レンズ — <a href="https://lens.domo-ai.com/">https://lens.domo-ai.com/</a></li>
+      <li>つまずきマップ — <a href="https://tsumazuki.domo-ai.com/">https://tsumazuki.domo-ai.com/</a></li>
+      <li>魂の銘 — <a href="https://soul-id.jp/">https://soul-id.jp/</a></li>
+      <li>ICHIREI 一字礼 — <a href="https://ichirei.soul-id.jp/">https://ichirei.soul-id.jp/</a></li>
+    </ul>
   </section>
 
-  <section class="products">
+  <section class="products" id="products">
     <div class="products__head">
-      <p class="eyebrow" data-en="OUR SERVICES" data-zh="我們的服務">サービス</p>
-      <p class="legend">
-        <span><i class="dot dot--live" aria-hidden="true"></i><b data-en="Live" data-zh="營運中">公開中</b></span>
-      </p>
+      <p class="eyebrow" data-en="PRODUCTS" data-zs="产品" data-zh="產品">商品</p>
     </div>
-    <div class="cards">
-      <a class="card card--soul" href="https://soul-id.jp/" target="_blank" rel="noopener">
-        <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:12%"></span><span class="ch" style="--x:30%"></span><span class="ch" style="--x:48%"></span><span class="glyph">銘</span><span class="seal">印</span><span class="g">魂の銘</span></div>
-        <div class="card__body">
-          <div class="card__title">
-            <h2 lang="ja">魂の銘<span>Soul ID</span></h2>
-            <span class="knob" aria-hidden="true"><i class="dot dot--live"></i></span>
-          </div>
-          <p data-en="A life preserved in photographs, voice and writing — portrait restoration, recorded interviews, autobiography and documentary film."
-             data-zh="以照片、聲音與文字留存一個人的一生——遺照修復、人生訪談、自傳與紀錄影片。">
-            一人の生涯を、写真と声と文章で残す。
-            遺影写真の修復、ライフインタビュー、自叙伝、ドキュメンタリー映像。
-          </p>
-          <span class="card__go">soul-id.jp <i aria-hidden="true">↗</i></span>
+    <div class="doors">
+      <div class="door">
+        <div class="door__h"><h2 data-en="Grow the power to think" data-zs="培养思考之力" data-zh="培養思考之力">考える力を育てる</h2>
+          <p data-en="For children and parents" data-zs="献给孩子与家长" data-zh="獻給孩子與家長">子どもと親へ</p></div>
+        <div class="door__c">
+        <div class="pc">
+          <div class="pc__top"><span class="pc__c"><span class="pc__cc" data-en="字" data-zs="字" data-zh="字">字</span></span><span class="pc__no">① <span data-en="Know" data-zs="认知" data-zh="認知">知る</span></span></div>
+          <h3 lang="ja">漢字でんしゃ<small>Kanji Densha</small><span class="gloss" data-en="" data-zs="（汉字电车）" data-zh="（漢字電車）"></span></h3>
+          <p class="pc__aud" data-en="Elementary school" data-zs="小学生" data-zh="小學生">小学生</p>
+          <p class="pc__p" data-en="Hold the words you think with, one character at a time. All 1,026 elementary kanji." data-zs="把思考所需的词语，一字一字装进自己心里。共1026字。" data-zh="把思考所需的詞語，一字一字裝進自己心裡。共1026字。">考えるための言葉を、一字ずつ自分の中に。小学校で習う1026字。</p>
+          
+          <div class="pc__f"><a class="pc__go" href="https://kanji-ai.jp/" target="_blank" rel="noopener" aria-label="漢字でんしゃ"><span data-en="Try free for 10 days" data-zs="免费试用10天" data-zh="免費試用10天">10日間無料で試す</span> <i aria-hidden="true">↗</i></a></div>
         </div>
-      </a>
-      <a class="card card--ichirei" href="https://ichirei.soul-id.jp/" target="_blank" rel="noopener">
-        <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:16%"></span><span class="ch" style="--x:36%"></span><span class="glyph">礼</span><span class="seal">印</span><span class="g">一字礼</span></div>
-        <div class="card__body">
-          <div class="card__title">
-            <h2 lang="ja">一字礼<span>ICHIREI</span></h2>
-            <span class="knob" aria-hidden="true"><i class="dot dot--live"></i></span>
-          </div>
-          <p data-en="A keepsake for a 60th birthday (kanreki) that captures sixty years of a life in a single character. A new service from Soul ID."
-             data-zh="為六十大壽（還曆）準備的紀念禮物——將六十年的人生凝聚成一個字。魂の銘的新服務。">
-            還暦の記念に、六十年の歩みを一文字に込めて贈る記念の品。魂の銘の新しいサービスです。
-          </p>
-          <span class="card__go">ichirei.soul-id.jp <i aria-hidden="true">↗</i></span>
+        <div class="pc">
+          <div class="pc__top"><span class="pc__c"><span class="pc__cc" data-en="問" data-zs="问" data-zh="問">問</span></span><span class="pc__no">② <span data-en="Ask" data-zs="提问" data-zh="提問">問う</span></span></div>
+          <h3 lang="ja">ナゼホリ<small>Nazehori</small><span class="gloss" data-en="" data-zs="（追问课）" data-zh="（追問課）"></span></h3>
+          <p class="pc__aud" data-en="Grades 3–4 and parents" data-zs="小学三、四年级与家长" data-zh="小學三、四年級與家長">小学3・4年生と保護者</p>
+          <p class="pc__p" data-en="After the AI’s answer, one more question. Stand on the side that asks." data-zs="在AI的答案之后，再多问一个问题。站在提问的一方。" data-zh="在AI的答案之後，再多問一個問題。站在提問的一方。">AIの答えのあとに、もう一問。問いを立てる側に立つ。</p>
+          <div class="pc__bk"><b data-en="Also as a book" data-zs="也有图书" data-zh="也有圖書">本もあります</b><a class="bk bk--ja" href="https://www.amazon.co.jp/dp/B0HKWZ79S7" target="_blank" rel="noopener" lang="ja">『AI時代、親子で育てる質問力』 Kindle</a><a class="bk bk--en" href="https://www.amazon.com/dp/B0HLP7W2MM" target="_blank" rel="noopener" lang="en">One More Question · Kindle</a></div>
+          <div class="pc__f"><a class="pc__go" href="https://domo-ai.com/nazehori/" target="_blank" rel="noopener" aria-label="ナゼホリ"><span data-en="Try lesson 1 free" data-zs="免费体验第1课" data-zh="免費體驗第1課">レッスン1を無料で</span> <i aria-hidden="true">↗</i></a></div>
         </div>
-      </a>
-      <a class="card card--kanji" href="https://kanji-ai.jp/" target="_blank" rel="noopener">
-        <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:14%"></span><span class="ch" style="--x:44%"></span><span class="glyph">漢</span><span class="track"></span><span class="cars"><i></i><i></i><i></i><i></i><i></i></span><span class="g">一字ずつ</span></div>
-        <div class="card__body">
-          <div class="card__title">
-            <h2 lang="ja">漢字でんしゃ<span>Kanji Densha</span></h2>
-            <span class="knob" aria-hidden="true"><i class="dot dot--live"></i></span>
-          </div>
-          <p data-en="A kanji-learning web app for primary school children: the 1,026 kanji of the MEXT curriculum, one character at a time across six years."
-             data-zh="為小學生設計的漢字學習網頁應用：依日本文部科學省課程的 1,026 個教育漢字，六年間逐字學習。">
-            小学生向けの漢字学習Webアプリ。
-            学年別漢字配当表の教育漢字1,026字を、六年かけて一字ずつ。
-          </p>
-          <span class="card__go">kanji-ai.jp <i aria-hidden="true">↗</i></span>
+        <div class="pc">
+          <div class="pc__top"><span class="pc__c"><span class="pc__cc" data-en="視" data-zs="视" data-zh="視">視</span></span><span class="pc__no">③ <span data-en="See" data-zs="洞察" data-zh="洞察">見る</span></span></div>
+          <h3 lang="ja">視点レンズ<small>The Lens</small><span class="gloss" data-en="" data-zs="（视角透镜）" data-zh="（視角透鏡）"></span></h3>
+          <p class="pc__aud" data-en="Entrance exams: junior high, high school, university" data-zs="初中、高中、大学升学考试" data-zh="國中、高中、大學升學考試">中学受験・高校受験・大学受験</p>
+          <p class="pc__p" data-en="Eight lenses to see the structure of a problem." data-zs="用8种透镜，看清问题的结构。" data-zh="用8種透鏡，看清問題的結構。">8つのレンズで、問題の構造を見抜く。</p>
+          <div class="pc__bk"><b data-en="Also as a book" data-zs="也有图书" data-zh="也有圖書">本もあります</b><a class="bk" href="https://www.amazon.co.jp/dp/B0HN7PVL1K" target="_blank" rel="noopener" lang="ja">視点レンズ 4週間ワークブック 中学受験算数</a><a class="bk" href="https://www.amazon.co.jp/dp/B0HN81B2JY" target="_blank" rel="noopener" lang="ja">視点レンズ 4週間ワークブック 高校入試数学</a><a class="bk" href="https://www.amazon.co.jp/dp/B0HNFWS6MJ" target="_blank" rel="noopener" lang="ja">視点レンズ 4週間ワークブック 大学入試数学</a></div>
+          <div class="pc__f"><a class="pc__go" href="https://lens.domo-ai.com/" target="_blank" rel="noopener" aria-label="視点レンズ"><span data-en="Try free for 3 days" data-zs="免费试用3天" data-zh="免費試用3天">3日間無料で試す</span> <i aria-hidden="true">↗</i></a></div>
         </div>
-      </a>
-      <a class="card card--naze" href="https://domo-ai.com/nazehori/" target="_blank" rel="noopener">
-        <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:20%"></span><span class="ch" style="--x:38%"></span><span class="glyph">問</span><span class="qs"><i style="--s:14px">なぜ</i><i style="--s:17px">なぜ</i><i style="--s:21px">？</i></span><span class="g">もう一問</span></div>
-        <div class="card__body">
-          <div class="card__title">
-            <h2 lang="ja">ナゼホリ<span>Nazehori</span></h2>
-            <span class="knob" aria-hidden="true"><i class="dot dot--live"></i></span>
-          </div>
-          <p data-en="Thinking practice for children in grades 3–4 and their parents — learning to ask the next question, and to dig one layer deeper."
-             data-zh="為小學三、四年級學童與家長設計的思考訓練——學會問出下一個問題，並且再深掘一層。">
-            小学3・4年生と保護者のための思考トレーニング。
-            次の問いを立てる力と、もう一段掘り下げる力を育てます。
-          </p>
-          <span class="card__go">domo-ai.com/nazehori <i aria-hidden="true">↗</i></span>
+        <div class="pc">
+          <div class="pc__top"><span class="pc__c"><span class="pc__cc" data-en="確" data-zs="确" data-zh="確">確</span></span><span class="pc__no">④ <span data-en="Verify" data-zs="验证" data-zh="驗證">確かめる</span></span></div>
+          <h3 lang="ja">つまずきマップ<small>Tsumazuki Map</small><span class="gloss" data-en="" data-zs="（错题地图）" data-zh="（錯題地圖）"></span></h3>
+          <p class="pc__aud" data-en="Elementary and junior high math" data-zs="中小学数学" data-zh="中小學數學">小・中学生の算数・数学</p>
+          <p class="pc__p" data-en="Snap your work and check your own stumbling points yourself." data-zs="拍一拍，亲自确认自己的卡点。" data-zh="拍一拍，親自確認自己的卡點。">撮るだけで、自分のつまずきを自分で確かめる。</p>
+          
+          <div class="pc__f"><a class="pc__go" href="https://tsumazuki.domo-ai.com/" target="_blank" rel="noopener" aria-label="つまずきマップ"><span data-en="Try 30 photos free" data-zs="免费试用30张" data-zh="免費試用30張">30枚まで無料で試す</span> <i aria-hidden="true">↗</i></a></div>
         </div>
-      </a>
-      <a class="card card--lens" href="https://lens.domo-ai.com/" target="_blank" rel="noopener">
-        <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:16%"></span><span class="ch" style="--x:36%"></span><span class="glyph">視</span><span class="g">見方</span></div>
-        <div class="card__body">
-          <div class="card__title">
-            <h2 lang="ja">視点レンズ<span>The Lens</span></h2>
-            <span class="knob" aria-hidden="true"><i class="dot dot--live"></i></span>
-          </div>
-          <p data-en="A math course that changes how students look at a problem before they solve it, with three courses for junior high, high school and university entrance exams."
-             data-zh="解題之前，先換個角度看的數學課程。國中、高中、大學入學考試三門課程。">
-            解き方の前に、見方を変える算数・数学の講座。中学受験・高校受験・大学受験の3コース。
-          </p>
-          <span class="card__go">lens.domo-ai.com <i aria-hidden="true">↗</i></span>
         </div>
-      </a>
-      <a class="card card--map" href="https://tsumazuki.domo-ai.com/" target="_blank" rel="noopener">
-        <div class="cover" aria-hidden="true" lang="ja"><span class="ch" style="--x:16%"></span><span class="ch" style="--x:36%"></span><span class="glyph">図</span><span class="g">撮るだけ</span></div>
-        <div class="card__body">
-          <div class="card__title">
-            <h2 lang="ja">つまずきマップ<span>Stumble Map</span></h2>
-            <span class="knob" aria-hidden="true"><i class="dot dot--live"></i></span>
-          </div>
-          <p data-en="Snap a photo of homework or a test, and the units your child stumbled on appear on a map, so you know what to review. Math for grades 1 to 12."
-             data-zh="只要拍下作業或考卷，卡住的單元就會標在地圖上，馬上知道該複習什麼。國小一年級到高中三年級的數學。">
-            宿題やテストを撮るだけで、つまずいた単元が地図に並び、何を復習すればいいかがわかるアプリ。小1〜高3の算数・数学。
-          </p>
-          <span class="card__go">tsumazuki.domo-ai.com <i aria-hidden="true">↗</i></span>
+      </div>
+      <div class="door door--late">
+        <div class="door__h"><h2 data-en="Keep the meaning of a life" data-zs="留存人生之意义" data-zh="留存人生之意義">生きた意味を残す</h2>
+          <p data-en="For later life" data-zs="献给人生下半场" data-zh="獻給人生下半場">人生の後半へ</p></div>
+        <div class="door__c">
+        <div class="pc pc--late">
+          <div class="pc__top"><span class="pc__c"><span class="pc__cc" data-en="語" data-zs="语" data-zh="語">語</span></span><span class="pc__no">⑤ <span data-en="Tell" data-zs="讲述" data-zh="講述">語る</span></span></div>
+          <h3 lang="ja">魂の銘<small>Soul ID</small><span class="gloss" data-en="" data-zs="（灵魂之铭）" data-zh="（靈魂之銘）"></span></h3>
+          <p class="pc__aud" data-en="Age 50+ and their families" data-zs="50岁以上及家人" data-zh="50歲以上及家人">50代以上とご家族</p>
+          <p class="pc__p" data-en="Tell what you have lived, in your own words, and leave it behind." data-zs="用自己的话讲述走过的人生，并把它留存下来。" data-zh="用自己的話講述走過的人生，並把它留存下來。">生きてきたことを、自分の言葉で語り、残す。</p>
+          
+          <div class="pc__f"><a class="pc__go" href="https://soul-id.jp/" target="_blank" rel="noopener" aria-label="魂の銘"><span data-en="Learn more" data-zs="了解详情" data-zh="了解詳情">詳しく見る</span> <i aria-hidden="true">↗</i></a></div>
         </div>
-      </a>
+        <div class="pc pc--late">
+          <div class="pc__top"><span class="pc__c"><span class="pc__cc" data-en="一" data-zs="一" data-zh="一">一</span></span><span class="pc__no">⑥ <span data-en="Engrave" data-zs="铭刻" data-zh="銘刻">刻む</span></span></div>
+          <h3 lang="ja">ICHIREI 一字礼<span class="gloss" data-en="" data-zs="（一字礼）" data-zh="（一字禮）"></span></h3>
+          <p class="pc__aud" data-en="Turning 60, and their families" data-zs="迎来花甲之年的人及家人" data-zh="迎來花甲之年的人及家人">還暦を迎える方とご家族</p>
+          <p class="pc__p" data-en="Sixty years in one character, carved in wood and given as a gift." data-zs="将六十年凝于一字，刻于木上，作为礼物相赠。" data-zh="將六十年凝於一字，刻於木上，作為禮物相贈。">六十年を一字に込めて、木に刻み、贈る。</p>
+          
+          <div class="pc__f"><a class="pc__go" href="https://ichirei.soul-id.jp/" target="_blank" rel="noopener" aria-label="ICHIREI 一字礼"><span data-en="Learn more" data-zs="了解详情" data-zh="了解詳情">詳しく見る</span> <i aria-hidden="true">↗</i></a></div>
+        </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="strip">
-    <div class="news panel">
-      <p class="eyebrow" data-en="NEWS" data-zh="最新消息">お知らせ</p>
-      <ol>
-        <li>
-          <time datetime="2026-09">2026.09</time>
-          <span class="tag tag--co" data-en="Company" data-zh="公司">会社</span>
-          <p data-en="Corporate site opened at beyondculture.ai." data-zh="企業網站 beyondculture.ai 正式開設。">コーポレートサイト beyondculture.ai を公開しました。</p>
-        </li>
-        <li>
-          <time datetime="2026-09">2026.09</time>
-          <span class="tag tag--kanji" lang="ja">漢字でんしゃ</span>
-          <p data-en="Kanji Densha is now open — free to try with no registration." data-zh="漢字でんしゃ 正式開放，無需註冊即可試用。">「漢字でんしゃ」を公開しました。登録なしでおためしいただけます。</p>
-        </li>
-        <li>
-          <time datetime="2026-10">2026.10</time>
-          <span class="tag tag--naze" lang="ja">ナゼホリ</span>
-          <p data-en="Nazehori Beginner Course for grades 3–4 and their parents is now open. Lesson 1 is free to try." data-zh="為小學三、四年級學童與家長設計的「ナゼホリ 入門コース」正式開放，第 1 課可免費試用。">小学3・4年生と保護者のための「ナゼホリ 入門コース」を公開しました。レッスン1は無料でおためしいただけます。</p>
-        </li>
-        <li>
-          <time datetime="2026-10">2026.10</time>
-          <span class="tag" lang="ja">視点レンズ</span>
-          <p data-en="The Lens, a math course for junior high, high school and university entrance exams, is now open. The first lens is free to try for 3 days." data-zh="國中、高中、大學入學考試數學課程「視角透鏡」正式開放，第一個透鏡可免費試用 3 天。">中学受験・高校受験・大学受験の算数・数学講座「視点レンズ」を公開しました。最初のレンズは3日間無料でおためしいただけます。</p>
-        </li>
-        <li>
-          <time datetime="2026-10">2026.10</time>
-          <span class="tag" lang="ja">書籍</span>
-          <p data-en="Three The Lens workbooks (junior high, high school and university entrance exams) are now on sale on Amazon." data-zh="「視角透鏡」問題集 3 冊（國中、高中、大學入學考試）已在 Amazon 上市。">「視点レンズ」の問題集3冊（中学受験・高校入試・大学入試）をAmazonで発売しました。</p>
-        </li>
-        <li>
-          <time datetime="2026-10">2026.10</time>
-          <span class="tag" lang="ja">つまずきマップ</span>
-          <p data-en="Stumble Map is now open: snap homework to know what to review. The first 30 photos are free." data-zh="拍照就知道該複習什麼的應用「卡點地圖」正式上線，前 30 張免費試用。">撮るだけで何を復習すればいいかわかるアプリ「つまずきマップ」を公開しました。30枚まで無料でおためしいただけます。</p>
-        </li>
-        <li>
-          <time datetime="2026-10">2026.10</time>
-          <span class="tag" lang="ja">ICHIREI</span>
-          <p data-en="The ICHIREI site for 60th-birthday keepsakes is now open." data-zh="還曆紀念禮物「ICHIREI 一字礼」網站正式上線。">還暦の記念品「ICHIREI 一字礼」のサイトを公開しました。</p>
-        </li>
-      </ol>
+  <section class="japan" id="japan">
+    <p class="eyebrow" data-en="WHY JAPAN" data-zs="为什么是日本" data-zh="為什麼是日本">なぜ日本から</p>
+    <h2 data-en="The method comes from Japan. The purpose is for everyone." data-zs="方法源于日本，目的为了每一个人。" data-zh="方法源於日本，目的為了每一個人。">方法は日本から。目的は、すべての人のために。</h2>
+    <div class="japan__g">
+      <div><h3 data-en="Kanji" data-zs="汉字" data-zh="漢字">漢字</h3><p data-en="One character, one concept: a tool for thinking." data-zs="一字一概念，思考的工具。" data-zh="一字一概念，思考的工具。">一字に、ひとつの概念。考えるための道具。</p></div>
+      <div><h3 data-en="Craft" data-zs="匠心" data-zh="匠心">ものづくり</h3><p data-en="Small, finished, carefully made." data-zs="小而精，用心打磨。" data-zh="小而精，用心打磨。">小さく、仕上げ、丁寧に。</p></div>
+      <div><h3 data-en="Form first" data-zs="型" data-zh="型">型</h3><p data-en="Learn the form, then make it your own." data-zs="先学其型，再成其己。" data-zh="先學其型，再成其己。">まず型を学び、やがて自分のものに。</p></div>
     </div>
-    <div class="pay panel">
-      <p class="eyebrow" data-en="PAYMENTS" data-zh="付款與結算">お支払いについて</p>
-      <dl>
-        <div>
-          <dt data-en="Merchant of record" data-zh="收款主體">決済事業者</dt>
-          <dd data-en="All services are sold and settled by Beyond Culture Doppo Bunka Co., Ltd. There is no separate seller." data-zh="所有服務均由 Beyond Culture 獨步文化株式会社 銷售並結算，無其他銷售主體。">すべてのサービスの販売・決済は Beyond Culture 獨歩文化株式会社 が行います。他の販売主体はありません。</dd>
-        </div>
-        <div>
-          <dt data-en="Methods" data-zh="付款方式">対応決済手段</dt>
-          <dd data-en="Kanji Densha / Nazehori / The Lens / Stumble Map (official online store): credit card (Visa, Mastercard, American Express, JCB), Apple Pay, Google Pay, Shop Pay, PayPal&lt;br&gt;Soul ID (individual quotation): bank transfer" data-zh="漢字でんしゃ／ナゼホリ／視角透鏡／卡點地圖（官方線上商店）：信用卡（Visa、Mastercard、American Express、JCB）、Apple Pay、Google Pay、Shop Pay、PayPal&lt;br&gt;魂の銘（個別報價）：銀行轉帳">漢字でんしゃ／ナゼホリ／視点レンズ／つまずきマップ（公式オンラインストア）：クレジットカード（Visa・Mastercard・American Express・JCB）、Apple Pay、Google Pay、Shop Pay、PayPal<br>魂の銘（個別お見積り）：銀行振込</dd>
-        </div>
-        <div>
-          <dt data-en="Statutory notices" data-zh="特定商取引法表示">特定商取引法に基づく表記</dt>
-          <dd>
-            <ul>
-              <li><a href="https://soul-id.jp/#legal" target="_blank" rel="noopener"><span lang="ja">魂の銘</span> — soul-id.jp</a></li>
-              <li><a href="https://kanji-ai.jp/tokushoho.html" target="_blank" rel="noopener"><span lang="ja">漢字でんしゃ</span> — kanji-ai.jp</a></li>
-              <li><a href="https://domo-ai.com/legal/tokushoho/" target="_blank" rel="noopener"><span lang="ja">ナゼホリ</span> — domo-ai.com</a></li>
-              <li><a href="https://soul-id-2.myshopify.com/policies/legal-notice" target="_blank" rel="noopener"><span data-en="The Lens / Stumble Map (official online store)" data-zh="視角透鏡・卡點地圖（官方線上商店）">視点レンズ・つまずきマップ（公式オンラインストア）</span> — soul-id-2.myshopify.com</a></li>
-            </ul>
-          </dd>
-        </div>
-      </dl>
-    </div>
+  </section>
+
+  <!-- Block 8 · Founder's note: kept ready but hidden until Brian supplies the text.
+       Remove the hidden attribute once the note is written. -->
+  <section class="founder" id="founder" hidden>
+    <p class="eyebrow" data-en="FROM THE FOUNDER" data-zs="创始人寄语" data-zh="創始人寄語">代表より</p>
+    <p>[TBD]</p>
+    <p class="founder__sig" data-en="Brian Fu, Founder" data-zs="创始人　[name form TBD]" data-zh="創始人　[name form TBD]">代表　傅豊国</p>
   </section>
 
   <section class="contact panel" id="contact">
     <div>
-      <p class="eyebrow" data-en="CONTACT" data-zh="聯絡我們">お問い合わせ</p>
-      <h2 data-en="Talk to us directly." data-zh="歡迎直接與我們聯繫。">直接、ご連絡ください。</h2>
+      <p class="eyebrow" data-en="CONTACT" data-zh="聯絡我們" data-zs="联络我们">お問い合わせ</p>
+      <h2 data-en="Talk to us directly." data-zh="歡迎直接與我們聯繫。" data-zs="欢迎直接与我们联系。">直接、ご連絡ください。</h2>
       <p data-en="Enquiries about any of our services, partnerships, press or payment verification reach the representative directly."
-         data-zh="各項服務、合作洽談、媒體採訪或金流審查相關詢問，均由代表人親自回覆。">
+         data-zh="各項服務、合作洽談、媒體採訪或金流審查相關詢問，均由代表人親自回覆。" data-zs="各项服务、合作洽谈、媒体采访或金流审查相关询问，均由代表人亲自回复。">
         各サービスのご相談、業務提携、取材、決済審査に関するお問い合わせは、代表者が直接拝見します。
       </p>
       <div class="contact__meta">
-        <span data-en="We reply within one business day." data-zh="平日一個工作天內回覆。">平日1営業日以内にご返信いたします</span>
+        <span data-en="We reply within one business day." data-zh="平日一個工作天內回覆。" data-zs="平日一个工作天内回复。">平日1営業日以内にご返信いたします</span>
         <a href="mailto:brian@beyondculture.ai">brian@beyondculture.ai</a>
       </div>
     </div>
 
     <form class="form" id="contactForm" novalidate>
-      <p class="form__title" data-en="Contact form" data-zh="聯絡表單">お問い合わせフォーム</p>
+      <p class="form__title" data-en="Contact form" data-zh="聯絡表單" data-zs="联络表单">お問い合わせフォーム</p>
       <p class="form__note" data-en="Your message goes straight to the representative. We reply within one business day."
-         data-zh="您的訊息將直接送達代表人，平日一個工作天內回覆。">送信いただいた内容は、代表者に直接届きます。平日1営業日以内にご返信いたします。</p>
+         data-zh="您的訊息將直接送達代表人，平日一個工作天內回覆。" data-zs="您的讯息将直接送达代表人，平日一个工作天内回复。">送信いただいた内容は、代表者に直接届きます。平日1営業日以内にご返信いたします。</p>
       <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label class="field"><span><b data-en="Name" data-zh="姓名" style="font-weight:inherit">お名前</b><i class="req" aria-hidden="true">＊</i></span>
+      <label class="field"><span><b data-en="Name" data-zh="姓名" data-zs="姓名" style="font-weight:inherit">お名前</b><i class="req" aria-hidden="true">＊</i></span>
         <input name="name" type="text" autocomplete="name" required></label>
-      <label class="field"><span><b data-en="Email address" data-zh="電子郵件" style="font-weight:inherit">メールアドレス</b><i class="req" aria-hidden="true">＊</i></span>
+      <label class="field"><span><b data-en="Email address" data-zh="電子郵件" data-zs="电子邮件" style="font-weight:inherit">メールアドレス</b><i class="req" aria-hidden="true">＊</i></span>
         <input name="email" type="email" autocomplete="email" required></label>
-      <label class="field"><span><b data-en="Your message" data-zh="詢問內容" style="font-weight:inherit">お問い合わせ内容</b><i class="req" aria-hidden="true">＊</i></span>
+      <label class="field"><span><b data-en="Your message" data-zh="詢問內容" data-zs="询问内容" style="font-weight:inherit">お問い合わせ内容</b><i class="req" aria-hidden="true">＊</i></span>
         <textarea name="message" required></textarea></label>
-      <button class="mailto send" type="submit"><span data-en="Send" data-zh="送出">送信する</span></button>
+      <button class="mailto send" type="submit"><span data-en="Send" data-zh="送出" data-zs="送出">送信する</span></button>
       <p class="form__status" role="status" aria-live="polite"></p>
     </form>
     <div class="thanks" id="thanks" hidden tabindex="-1">
@@ -544,26 +811,64 @@ html[lang="en"] .hero__lede{margin-top:20px}
       <p class="thanks__copy"></p>
     </div>
   </section>
+
+  <section class="closing" id="closing">
+    <p class="closing__l" data-en="Never give up on being human." data-zs="永不放弃做一个人。" data-zh="永不放棄做一個人。">人間であることを、あきらめない。</p>
+  </section>
 </main>
 
 <footer class="foot">
-  <div class="foot__panel panel">
-    <p class="eyebrow" data-en="COMPANY" data-zh="公司資訊">会社概要</p>
+
+  <div class="foot__links">
+    <p class="eyebrow" data-en="PRODUCT SITES" data-zs="产品网站" data-zh="產品網站">サイト</p>
+    <p><a href="https://domo-ai.com/" target="_blank" rel="noopener">domo-ai.com</a> · <a href="https://kanji-ai.jp/" target="_blank" rel="noopener">kanji-ai.jp</a> · <a href="https://soul-id.jp/" target="_blank" rel="noopener">soul-id.jp</a> · <a href="https://ichirei.soul-id.jp/" target="_blank" rel="noopener">ichirei.soul-id.jp</a></p>
+  </div>
+  <div class="pay panel pay--foot">
+
+      <p class="eyebrow" data-en="PAYMENTS" data-zh="付款與結算" data-zs="付款与结算">お支払いについて</p>
+      <dl>
+        <div>
+          <dt data-en="Merchant of record" data-zh="收款主體" data-zs="收款主体">決済事業者</dt>
+          <dd data-en="All services are sold and settled by Beyond Culture Doppo Bunka Co., Ltd. There is no separate seller." data-zh="所有服務均由 Beyond Culture 獨步文化株式会社 銷售並結算，無其他銷售主體。" data-zs="所有服务均由 Beyond Culture 独步文化株式会社 销售并结算，无其他销售主体。">すべてのサービスの販売・決済は Beyond Culture 獨歩文化株式会社 が行います。他の販売主体はありません。</dd>
+        </div>
+        <div>
+          <dt data-en="Methods" data-zh="付款方式" data-zs="付款方式">対応決済手段</dt>
+          <dd>
+            <span data-en="Kanji Densha / Nazehori / ICHIREI / The Lens / Tsumazuki Map (official online store): Credit card (Visa, Mastercard, American Express, JCB), Apple Pay, Google Pay, Shop Pay" data-zh="漢字でんしゃ／ナゼホリ／一字礼／視点レンズ／つまずきマップ（官方網路商店）：信用卡（Visa、Mastercard、American Express、JCB）、Apple Pay、Google Pay、Shop Pay" data-zs="汉字でんしゃ／ナゼホリ／一字礼／视点レンズ／つまずきマップ（官方网路商店）：信用卡（Visa、Mastercard、American Express、JCB）、Apple Pay、Google Pay、Shop Pay" lang="ja">・漢字でんしゃ／ナゼホリ／一字礼／視点レンズ／つまずきマップ（公式オンラインストア）：クレジットカード（Visa・Mastercard・American Express・JCB）、Apple Pay、Google Pay、Shop Pay</span><br>
+            <span data-en="Soul ID (individual quotations): Bank transfer" data-zh="魂の銘（個別報價）：銀行轉帳" data-zs="魂の铭（个别报价）：银行转帐" lang="ja">・魂の銘（個別お見積り）：銀行振込</span>
+          </dd>
+        </div>
+        <div>
+          <dt data-en="Statutory notices" data-zh="特定商取引法表示" data-zs="特定商取引法表示">特定商取引法に基づく表記</dt>
+          <dd>
+            <ul>
+              <li><a href="https://soul-id.jp/#legal" target="_blank" rel="noopener"><span lang="ja">魂の銘</span> — soul-id.jp</a></li>
+              <li><a href="https://kanji-ai.jp/tokushoho.html" target="_blank" rel="noopener"><span lang="ja">漢字でんしゃ</span> — kanji-ai.jp</a></li>
+              <li><a href="https://domo-ai.com/legal/tokushoho/" target="_blank" rel="noopener"><span lang="ja">ナゼホリ</span> — domo-ai.com</a></li>
+              <li><a href="https://soul-id-2.myshopify.com/policies/legal-notice" target="_blank" rel="noopener"><span data-en="Official online store" data-zh="官方網路商店" data-zs="官方网路商店" lang="ja">公式オンラインストア</span> — soul-id-2.myshopify.com</a></li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+  <div class="foot__panel panel" id="company">
+    <p class="eyebrow" data-en="COMPANY" data-zh="公司資訊" data-zs="公司资讯">会社概要</p>
     <dl class="profile">
-      <div><dt data-en="Legal name" data-zh="商號">商号</dt><dd lang="ja">Beyond Culture 獨歩文化株式会社</dd></div>
-      <div><dt data-en="Representative" data-zh="代表人">代表者</dt><dd lang="ja">代表取締役 傅豊国</dd></div>
-      <div><dt data-en="Address" data-zh="地址">所在地</dt><dd lang="ja">〒143-0023 東京都大田区山王2丁目5番13号 大森北口ビル5F 5-72</dd></div>
-      <div><dt data-en="Phone" data-zh="電話">電話番号</dt><dd data-en="080-5157-2817 (Weekdays 10:00–18:00 JST)" data-zh="080-5157-2817（平日 10:00–18:00）">080-5157-2817（受付時間：平日10:00〜18:00）</dd></div>
-      <div><dt data-en="Founded" data-zh="成立">設立</dt><dd>2023年10月18日</dd></div>
-      <div><dt data-en="Corporate number" data-zh="法人番號">法人番号</dt><dd>6011701025709</dd></div>
-      <div><dt data-en="Contact" data-zh="聯絡方式">連絡先</dt><dd><a href="mailto:brian@beyondculture.ai">brian@beyondculture.ai</a></dd></div>
-      <div><dt data-en="Official online store" data-zh="官方線上商店">公式オンラインストア</dt><dd><a href="https://soul-id-2.myshopify.com" target="_blank" rel="noopener">soul-id-2.myshopify.com</a> <span data-en="(Kanji Densha and Nazehori)" data-zh="（漢字でんしゃ・ナゼホリ）">（漢字でんしゃ・ナゼホリのお申し込み）</span></dd></div>
-      <div><dt data-en="Social media" data-zh="官方社群">公式SNS</dt><dd class="socrow"><a class="soc" href="https://www.youtube.com/@Domo-ai" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a class="soc" href="https://www.tiktok.com/@domoai2026" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a class="soc" href="https://x.com/lens_brianfu" target="_blank" rel="noopener" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></dd></div>
-      <div><dt data-en="Business" data-zh="營業項目">事業内容</dt><dd data-en="AI-driven cultural products; memorial photography, film and publishing; educational SaaS" data-zh="AI 文化事業；遺照、影像與出版；教育 SaaS">AIを活用した文化事業／遺影写真・映像・出版／教育向けSaaS</dd></div>
+      <div><dt data-en="Legal name" data-zh="商號" data-zs="商号">商号</dt><dd lang="ja">Beyond Culture 獨歩文化株式会社</dd></div>
+      <div><dt data-en="Representative" data-zh="代表人" data-zs="代表人">代表者</dt><dd lang="ja">代表取締役 傅豊国</dd></div>
+      <div><dt data-en="Address" data-zh="地址" data-zs="地址">所在地</dt><dd lang="ja">〒143-0023 東京都大田区山王2丁目5番13号 大森北口ビル5F 5-72</dd></div>
+      <div><dt data-en="Founded" data-zh="成立" data-zs="成立">設立</dt><dd>2023年10月18日</dd></div>
+      <div><dt data-en="Corporate number" data-zh="法人番號" data-zs="法人番号">法人番号</dt><dd>6011701025709</dd></div>
+      <div><dt data-en="Phone" data-zh="電話" data-zs="电话">電話番号</dt><dd lang="ja">080-5157-2817（受付時間：平日10:00〜18:00）</dd></div>
+      <div><dt data-en="Contact" data-zh="聯絡方式" data-zs="联络方式">連絡先</dt><dd><a href="mailto:brian@beyondculture.ai">brian@beyondculture.ai</a></dd></div>
+      <div><dt data-en="Official online store" data-zh="官方網路商店" data-zs="官方网路商店">公式オンラインストア</dt><dd><a href="https://soul-id-2.myshopify.com" target="_blank" rel="noopener">soul-id-2.myshopify.com</a><br><span data-en="Orders for Kanji Densha and Nazehori" data-zh="漢字でんしゃ・ナゼホリのお申し込み" data-zs="汉字でんしゃ・ナゼホリのお申し込み" lang="ja">（漢字でんしゃ・ナゼホリのお申し込み）</span></dd></div>
+      <div><dt data-en="Social media" data-zh="官方社群" data-zs="官方社群">公式SNS</dt><dd class="socrow"><a class="soc" href="https://www.youtube.com/@Domo-ai" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a class="soc" href="https://www.tiktok.com/@domoai2026" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a class="soc" href="https://x.com/lens_brianfu" target="_blank" rel="noopener" aria-label="X" title="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></dd></div>
+      <div><dt data-en="Business" data-zh="營業項目" data-zs="营业项目">事業内容</dt><dd data-en="AI-driven cultural products; memorial photography, film and publishing; educational SaaS" data-zh="AI 文化事業；遺照、影像與出版；教育 SaaS" data-zs="AI 文化事业；遗照、影像与出版；教育 SaaS">AIを活用した文化事業／遺影写真・映像・出版／教育向けSaaS</dd></div>
     </dl>
   </div>
   <div class="copy">
-    <span data-en="Statutory notices are published on each product site." data-zh="特定商取引法相關表示，刊載於各產品網站。">特定商取引法に基づく表記は、各サービスのサイトに掲載しています。</span>
+    <span data-en="Statutory notices are published on each product site." data-zh="特定商取引法相關表示，刊載於各產品網站。" data-zs="特定商取引法相关表示，刊载于各产品网站。">特定商取引法に基づく表記は、各サービスのサイトに掲載しています。</span>
     <span>© <span id="yr"></span> Beyond Culture 獨歩文化株式会社</span>
   </div>
 </footer>
@@ -572,24 +877,33 @@ html[lang="en"] .hero__lede{margin-top:20px}
 (function(){
   "use strict";
   document.getElementById("yr").textContent=new Date().getFullYear();
-  var nodes=[].slice.call(document.querySelectorAll("[data-en],[data-zh]"));
+  var nodes=[].slice.call(document.querySelectorAll("[data-en],[data-zh],[data-zs]"));
   nodes.forEach(function(n){ n.dataset.ja=n.innerHTML; });
-  var tags={ja:"ja",en:"en",zh:"zh-Hant"};
+  var tags={ja:"ja",en:"en",zh:"zh-Hant",zs:"zh-Hans"};
+  var TT={"ja": ["Beyond Culture 獨歩文化｜AIの時代に、人間であることを鍛える。", "考える・問う・筋道を立てる・感じる。AIには代われない四つの力を鍛える道具を、日本でつくっています。漢字、問い、数学、そして人生の一字まで。"], "en": ["Beyond Culture — In the age of AI, train what makes us human.", "Think, question, reason, feel. Beyond Culture makes tools in Japan that train the four powers no AI can exercise for us, from kanji and questions to math and the meaning of a life."], "zs": ["Beyond Culture 獨歩文化｜在AI时代，锻炼人之为人。", "思考、提问、推理、感受。Beyond Culture 在日本打造锻炼AI无法替代的四种力量的工具：从汉字、提问、数学，到人生的一字。"], "zh": ["Beyond Culture 獨歩文化｜在AI時代，鍛鍊人之為人。", "思考、提問、推理、感受。Beyond Culture 在日本打造鍛鍊AI無法替代的四種力量的工具：從漢字、提問、數學，到人生的一字。"]};
+  var fontsLoaded={};
+  function loadFonts(L){ if(L!=="zh"&&L!=="zs"||fontsLoaded[L]) return; fontsLoaded[L]=1; var l=document.createElement("link"); l.rel="stylesheet"; l.href=L==="zs"?"https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@400;700&display=swap":"https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&family=Noto+Sans+TC:wght@400;700&display=swap"; document.head.appendChild(l); }
   var btns=[].slice.call(document.querySelectorAll(".langs button"));
   function setLang(L){
     nodes.forEach(function(n){
-      var v = L==="ja" ? n.dataset.ja : n.dataset[L];
-      if(v!==undefined && v!=="") n.innerHTML=v;
+      var v = L==="ja" ? n.dataset.ja : (L==="zs" ? (n.dataset.zs!==undefined ? n.dataset.zs : n.dataset.zh) : n.dataset[L]);
+      if(v!==undefined) n.innerHTML=v;
     });
     document.documentElement.lang=tags[L];
+    document.title=TT[L][0]; var md=document.querySelector('meta[name="description"]'); if(md) md.setAttribute("content",TT[L][1]);
+    loadFonts(L); if(typeof resetCore==="function") resetCore();
     btns.forEach(function(b){ b.setAttribute("aria-pressed", String(b.dataset.lang===L)); });
     try{ localStorage.setItem("bc-lang",L); }catch(e){}
   }
   btns.forEach(function(b){ b.addEventListener("click",function(){ setLang(b.dataset.lang); }); });
   var saved=null;
   try{ saved=localStorage.getItem("bc-lang"); }catch(e){}
+  var nl=(navigator.language||"").toLowerCase();
   if(saved && tags[saved]) setLang(saved);
-  else if((navigator.language||"").toLowerCase().indexOf("zh")===0) setLang("zh");
+  else if(nl.indexOf("ja")===0) setLang("ja");
+  else if(/^zh-(cn|sg|hans)/.test(nl) || nl==="zh") setLang("zs");
+  else if(/^zh-(tw|hk|mo|hant)/.test(nl)) setLang("zh");
+  else setLang("en");
 
   /* contact form — delivered by Web3Forms straight to brian@beyondculture.ai.
      Paste the access key below. Until it is set, the form falls back to
@@ -598,9 +912,10 @@ html[lang="en"] .hero__lede{margin-top:20px}
   var TX={
     ja:{sending:"送信中…", t:"送信しました。", b:"お問い合わせありがとうございます。内容を確認のうえ、平日1営業日以内に brian@beyondculture.ai よりご返信いたします。", c:"お名前：", fail:"送信できませんでした。お手数ですが brian@beyondculture.ai へ直接メールをお送りください。"},
     en:{sending:"Sending…", t:"Message sent.", b:"Thank you for getting in touch. We will reply from brian@beyondculture.ai within one business day.", c:"Name: ", fail:"We couldn't send your message. Please email brian@beyondculture.ai directly."},
+    zs:{sending:"发送中…", t:"已发送。", b:"感谢您的来信。我们将于工作日一个工作日内，由 brian@beyondculture.ai 回复您。", c:"姓名：", fail:"消息未能发送，请直接发送邮件至 brian@beyondculture.ai。"},
     zh:{sending:"傳送中…", t:"已送出。", b:"感謝您的來信。我們將於平日一個工作天內，由 brian@beyondculture.ai 回覆您。", c:"姓名：", fail:"訊息未能送出，請直接寄信至 brian@beyondculture.ai。"}
   };
-  function L(){ var l=document.documentElement.lang; return l==="en"?"en":(l.indexOf("zh")===0?"zh":"ja"); }
+  function L(){ var l=document.documentElement.lang; return l==="en"?"en":(l==="zh-Hans"?"zs":(l.indexOf("zh")===0?"zh":"ja")); }
   var form=document.getElementById("contactForm");
   if(form){
     var btn=form.querySelector(".send"), status=form.querySelector(".form__status"), thanks=document.getElementById("thanks");
@@ -636,6 +951,30 @@ html[lang="en"] .hero__lede{margin-top:20px}
     });
   }
 
+
+  /* necklace: hover / tap / focus a pearl to read its promise in the centre */
+  var ring=document.getElementById("ring");
+  if(ring){
+    var core=ring.querySelector(".core__body"), def=ring.querySelector(".core__def"), pearls=[].slice.call(ring.querySelectorAll(".pearl"));
+    function show(p){ pearls.forEach(function(x){x.classList.toggle("is-on",x===p);}); core.innerHTML=p.querySelector(".tip").innerHTML; core.style.animation="none"; void core.offsetWidth; core.style.animation=""; }
+    function reset(){ pearls.forEach(function(x){x.classList.remove("is-on");}); core.innerHTML=def.innerHTML; }
+    window.resetCore=reset;
+    pearls.forEach(function(p){
+      p.addEventListener("mouseenter",function(){ if(window.matchMedia("(min-width:821px)").matches) show(p); });
+      p.addEventListener("focus",function(){ if(window.matchMedia("(min-width:821px)").matches) show(p); });
+      p.addEventListener("click",function(){ var a=p.querySelector(".tip__a"); if(a&&window.matchMedia("(min-width:821px)").matches) window.open(a.href,"_blank","noopener"); });
+    });
+    pearls.forEach(function(p){ p.addEventListener("keydown",function(e){ if(e.key==="Enter"){ show(p); } if(e.key==="Escape"){ reset(); } }); });
+    document.addEventListener("click",function(e){ if(!ring.contains(e.target)) reset(); });
+    ring.addEventListener("mouseleave",function(){ if(!ring.contains(document.activeElement)) reset(); });
+  }
+
+  var menu=document.getElementById("menu"), nav=document.getElementById("nav");
+  if(menu){ menu.addEventListener("click",function(){ var o=nav.classList.toggle("open"); menu.setAttribute("aria-expanded",String(o)); });
+    nav.addEventListener("click",function(e){ if(e.target.tagName==="A"){ nav.classList.remove("open"); menu.setAttribute("aria-expanded","false"); } }); }
+  var topbar=document.querySelector(".top");
+  function sc(){ topbar.classList.toggle("is-scrolled", window.scrollY>8); }
+  window.addEventListener("scroll",sc,{passive:true}); sc();
   /* gentle pointer depth on the hero scene */
   var scene=document.querySelector("[data-depth]");
   var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
