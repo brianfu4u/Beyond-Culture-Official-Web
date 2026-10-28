@@ -900,10 +900,7 @@ html[lang="en"] .bk--en{order:-1}
   try{ saved=localStorage.getItem("bc-lang"); }catch(e){}
   var nl=(navigator.language||"").toLowerCase();
   if(saved && tags[saved]) setLang(saved);
-  else if(nl.indexOf("ja")===0) setLang("ja");
-  else if(/^zh-(cn|sg|hans)/.test(nl) || nl==="zh") setLang("zs");
-  else if(/^zh-(tw|hk|mo|hant)/.test(nl)) setLang("zh");
-  else setLang("en");
+  else setLang("ja"); /* Japanese is the default for every visitor; a language they pick is remembered */
 
   /* contact form — delivered by Web3Forms straight to brian@beyondculture.ai.
      Paste the access key below. Until it is set, the form falls back to
