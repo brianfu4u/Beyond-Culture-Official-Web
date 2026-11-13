@@ -3,7 +3,7 @@
 Governs all future generation of beyondculture.ai. Chosen direction: **Style I — pastel bento** (warm cream canvas, one pastel tile per product, rounded 30px cards, near-black pill buttons, coral accent #e8553d). References from awesome-design-md: notion / pinterest (soft coloured tiles), claude (warm paper, serif).
 
 ## 1. Overview
-One page, one idea: **a necklace of six pearls on one thread** — 知る→問う→見る→確かめる→語る→刻む.
+One page, one idea: **a necklace of seven pearls on one thread** — 知る→問う→見る→確かめる→整える→語る→刻む. The thread follows a life: childhood (①–④), working years (⑤ 整, Kitchiri for law firms), later life (⑥⑦). One idea across every field: AI is the tool; the person thinks, decides and feels.
 The page explains why one company makes a kanji app, a math course and a 60th-birthday gift, then routes each visitor to the right brand site. It does not sell.
 Mood: ink on paper, generous space, one red seal. No decorative bubbles, no glass blur.
 
@@ -24,21 +24,21 @@ Shippori Mincho B1 (headlines, pearl characters, weight 800), Zen Kaku Gothic Ne
 Body ≥ 14.5px, line-height ≥ 1.9. Japanese: `line-break:strict; word-break:auto-phrase`. Hero headline is vertical (`vertical-rl`) in ja / zh-Hant, horizontal in en; "AI" uses `text-combine-upright`.
 
 ## 4. Layout
-Max width 1180px. Order: Hero + necklace → six pearls in two doors → Philosophy (dark band) → News/Payments → Contact → Company.
-Children's door (①–④) comes first and is wider; later-life door (⑤⑥) is red-ruled. State the honest gap (working-age adults) in one line.
+Max width 1180px. Order: Hero + necklace → seven pearls in three doors → Philosophy (dark band) → News/Payments → Contact → Company.
+Children's door (①–④) comes first and is wider; the professional door (⑤, slate tile, ink pearl) and later-life door (⑥⑦) share the second row. Kitchiri wording: a tool for lawyers, never "AI lawyer", "legal advice" or 法律相談; no prices, no numbers; English and Chinese say "Japanese-language service".
 Mobile: ring becomes a vertical thread, pearls stacked, 44px+ tap targets, no horizontal scroll.
 
 ## 5. Elevation & Shapes
 Hairline `0 0 0 1px` borders; shadow only on hover. Cards radius 6px, pearls are circles, buttons are pills. No backdrop blur.
 
 ## 6. Components
-- **Pearl**: white circle, ink outline, one Mincho character; red outline for ⑤⑥. Hover/tap shows promise in the ring centre.
+- **Pearl**: white circle, ink outline, one Mincho character; coral fill for ⑥⑦, ink fill for ⑤. Hover/tap shows promise in the ring centre.
 - **Product card (one component ×6)**: character + number/verb, name, audience tag, one-line promise, "from" price, one button (無料で試す / 詳しく見る).
 - **Clasp**: red square seal 留 at the top of the ring.
 - Books hang on ② and ③ as a small line, not as cards.
 
 ## 7. Motion
-Thread draws in 1.8s, pearls appear ①→⑥. CSS only. `prefers-reduced-motion` shows the finished state.
+Thread draws in 1.8s, pearls appear ①→⑦. CSS only. `prefers-reduced-motion` shows the finished state.
 
 ## 8. Do / Don't
 Do: Japanese first, then EN / 繁中; keep each language a full version; keep one file, push-to-deploy.
