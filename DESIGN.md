@@ -3,7 +3,7 @@
 Governs all future generation of beyondculture.ai. Chosen direction: **Style I — pastel bento** (warm cream canvas, one pastel tile per product, rounded 30px cards, near-black pill buttons, coral accent #e8553d). References from awesome-design-md: notion / pinterest (soft coloured tiles), claude (warm paper, serif).
 
 ## 1. Overview
-One page, one idea: **a necklace of seven pearls on one thread** — 知る→問う→見る→確かめる→整える→語る→刻む. The thread follows a life: childhood (①–④), working years (⑤ 整, Kitchiri for law firms), later life (⑥⑦). One idea across every field: AI is the tool; the person thinks, decides and feels.
+One page, one idea: **a necklace of seven pearls on one thread** — 知る→問う→見る→確かめる→整える→語る→贈る. The thread follows a life: childhood (①–④), working years (⑤ 整, Kitchiri for law firms), later life (⑥⑦). One idea across every field: AI is the tool; the person thinks, decides and feels.
 The page explains why one company makes a kanji app, a math course and a 60th-birthday gift, then routes each visitor to the right brand site. It does not sell.
 Mood: ink on paper, generous space, one red seal. No decorative bubbles, no glass blur.
 
@@ -43,3 +43,6 @@ Thread draws in 1.8s, pearls appear ①→⑦. CSS only. `prefers-reduced-motion
 ## 8. Do / Don't
 Do: Japanese first, then EN / 繁中; keep each language a full version; keep one file, push-to-deploy.
 Don't: add prices/checkout (brand sites sell), add a founder's note (philosophy replaces it), add a second accent color, use glass/blur or floating bubbles, change the 特商法 / payment text without checking Shopify.
+
+## ICHIREI wording (Nov 2026)
+ICHIREI is a same-day e-gift for any important relationship (verb 贈る). Never write 木に刻む, 手彫り, hand-carved, gold leaf, or wood delivery dates; never say the receiver chooses the character; never mention AI in ICHIREI text. Its card may show the e-gift price line; the English button goes to ichirei.soul-id.jp/en.
