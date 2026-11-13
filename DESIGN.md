@@ -46,3 +46,6 @@ Don't: add prices/checkout (brand sites sell), add a founder's note (philosophy 
 
 ## ICHIREI wording (Nov 2026)
 ICHIREI is a same-day e-gift for any important relationship (verb 贈る). Never write 木に刻む, 手彫り, hand-carved, gold leaf, or wood delivery dates; never say the receiver chooses the character; never mention AI in ICHIREI text. Its card may show the e-gift price line; the English button goes to ichirei.soul-id.jp/en.
+
+## Card illustrations
+Each product card carries one line-drawing (inline SVG, ink strokes, one coral accent) showing what the product does, with a one-line caption under it. They are illustrations, never fake screenshots. Replace with real product images only when the owner supplies them.
