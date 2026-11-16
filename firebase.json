@@ -25,6 +25,18 @@
           }
         ]
       }
+    ],
+    "redirects": [
+      {
+        "source": "/ichirei",
+        "destination": "https://ichirei.beyondculture.ai/",
+        "type": 302
+      },
+      {
+        "source": "/ichirei/:path*",
+        "destination": "https://ichirei.beyondculture.ai/:path*",
+        "type": 302
+      }
     ]
   }
 }
